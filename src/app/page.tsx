@@ -61,8 +61,7 @@ export default function Home() {
     </h2>
 
     <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
-      Enter the arcade shrine of CristoCoin. A community-driven experimental
-      memecoin on Polygon, created for memes, culture and Web3 believers.
+     Enter the arcade shrine of CristoCoin. A community-powered memecoin on Polygon built for memes, culture and Web3 believers.
     </p>
 
     <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/40 p-4">
@@ -135,10 +134,7 @@ export default function Home() {
               </h2>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300">
-                For the smoothest mobile experience, open this website inside
-                the MetaMask Browser. Safari users can try WalletConnect, but if
-                MetaMask opens without showing a request, use MetaMask Browser
-                instead.
+                The best mobile path is simple: open MetaMask, enter the built-in Browser, visit the shrine and connect your wallet. Safari users can try WalletConnect, but MetaMask Browser is the recommended route.
               </p>
             </div>
 
