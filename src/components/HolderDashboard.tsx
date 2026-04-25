@@ -98,7 +98,7 @@ export function HolderDashboard() {
       const formattedBalance = Number(formatUnits(rawBalance, 18));
 
       setBalance(formattedBalance);
-      setMessage("CristoCoin rank revealed ✅");
+      setMessage("Your arcade rank has been revealed ✅");
       setLoading(false);
     } catch (error: any) {
       console.error(error);
@@ -124,6 +124,11 @@ export function HolderDashboard() {
           <p className="mt-2 text-sm text-zinc-400">
             Connect your wallet and reveal your CristoCoin arcade rank.
           </p>
+          {rank === "Cristo Guardian" && (
+  <p className="mt-3 text-sm text-purple-200">
+    You hold the full meme supply. The shrine recognizes you.
+  </p>
+)}
         </div>
 
         <button
@@ -138,7 +143,7 @@ export function HolderDashboard() {
             WebkitTapHighlightColor: "transparent",
           }}
         >
-          {loading ? "Loading..." : wallet ? "Refresh Rank" : "Connect Wallet"}
+          {loading ? "Scanning..." : wallet ? "Reveal My Rank" : "Connect Wallet"}
         </button>
       </div>
 
