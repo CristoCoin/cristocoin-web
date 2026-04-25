@@ -18,6 +18,42 @@ export default function Home() {
       <section className="relative px-6 py-10 md:px-16 md:py-16">
          <section className="px-6 pb-10 md:px-16">
   <HolderDashboard />
+  <section className="mx-auto mt-10 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
+  <div className="mb-6">
+    <p className="mb-2 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
+      Shrine Access
+    </p>
+
+    <h2 className="text-3xl font-black text-white">
+      How to Enter the Shrine
+    </h2>
+
+    <p className="mt-3 text-zinc-300">
+      The smoothest mobile experience is inside MetaMask Browser. Safari users
+      can also try WalletConnect.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-5">
+    {[
+      "Open MetaMask",
+      "Go to Browser",
+      "Visit cristocoin-web.vercel.app",
+      "Connect Wallet",
+      "Reveal your Arcade Rank",
+    ].map((step, index) => (
+      <div
+        key={step}
+        className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4"
+      >
+        <p className="mb-3 text-2xl font-black text-[#D4AF37]">
+          0{index + 1}
+        </p>
+        <p className="font-bold text-purple-100">{step}</p>
+      </div>
+    ))}
+  </div>
+</section>
 </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3733,transparent_30%)]" />
 

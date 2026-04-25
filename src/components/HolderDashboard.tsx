@@ -107,7 +107,37 @@ export function HolderDashboard() {
       setLoading(false);
     }
   }
+async function addCristoToWallet() {
+  const ethereum = (window as any).ethereum;
 
+  if (!ethereum) {
+    setMessage("Open this website inside MetaMask Browser to add $CRISTO.");
+    return;
+  }
+
+  try {
+    const wasAdded = await ethereum.request({
+      method: "wallet_watchAsset",
+      params: {
+        type: "ERC20",
+        options: {
+          address: CRISTO_ADDRESS,
+          symbol: "CRISTO",
+          decimals: 18,
+        },
+      },
+    });
+
+    if (wasAdded) {
+      setMessage("$CRISTO added to MetaMask ✅");
+    } else {
+      setMessage("$CRISTO was not added.");
+    }
+  } catch (error: any) {
+    console.error(error);
+    setMessage(`Add token failed: ${error?.message || "Unknown error"}`);
+  }
+}
   const currentBalance = balance ?? 0;
   const rank = getRank(currentBalance);
   const memePower = getMemePower(currentBalance);
@@ -146,6 +176,13 @@ export function HolderDashboard() {
         >
           {loading ? "Scanning..." : wallet ? "Reveal My Rank" : "Connect Wallet"}
         </button>
+        <button
+  type="button"
+  onClick={addCristoToWallet}
+  className="mt-3 w-full rounded-xl border border-[#D4AF37] bg-[#D4AF37]/10 px-6 py-4 font-black text-[#D4AF37] shadow-[0_0_20px_#D4AF3733] transition hover:bg-[#D4AF37]/20"
+>
+  Add $CRISTO to MetaMask
+</button>
         <div className="relative z-[10000]">
   <ConnectButton.Custom>
     {({ openConnectModal, account, mounted }) => {
