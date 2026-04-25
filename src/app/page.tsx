@@ -37,59 +37,92 @@ export default function Home() {
             </a>
           </nav>
 
-          <section className="grid gap-10 pt-16 md:grid-cols-2 md:items-center">
-            <div>
-              <p className="mb-4 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
-                Built on Polygon
-              </p>
+          <section className="grid gap-12 pt-16 md:grid-cols-2 md:items-center">
+  <div>
+    <div className="mb-5 flex flex-wrap gap-3">
+      <p className="inline-block rounded-lg border border-purple-400 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
+        Built on Polygon
+      </p>
 
-              <h1 className="text-6xl font-black leading-none md:text-8xl">
-                CristoCoin
-                <span className="block text-[#D4AF37]">$CRISTO</span>
-              </h1>
+      <p className="inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
+        8-Bit Meme Energy
+      </p>
+    </div>
 
-              <h2 className="mt-8 text-3xl font-black text-purple-300 md:text-4xl">
-                The meme has risen.
-              </h2>
+    <h1 className="text-6xl font-black leading-none tracking-tight md:text-8xl">
+      CristoCoin
+      <span className="block bg-gradient-to-r from-[#D4AF37] via-yellow-300 to-purple-300 bg-clip-text text-transparent">
+        $CRISTO
+      </span>
+    </h1>
 
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
-                Faith in memes. Built on Polygon. CristoCoin is an experimental
-                memecoin created for memes, community and crypto culture.
-              </p>
+    <h2 className="mt-8 text-3xl font-black text-purple-300 md:text-5xl">
+      The meme has risen.
+    </h2>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-                <a
-                  href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
-                  target="_blank"
-                  className="rounded-xl bg-[#D4AF37] px-6 py-4 text-center font-black text-black shadow-[0_0_25px_#D4AF3777]"
-                >
-                  View Contract
-                </a>
+    <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
+      Enter the arcade shrine of CristoCoin. A community-driven experimental
+      memecoin on Polygon, created for memes, culture and Web3 believers.
+    </p>
 
-                <a
-                  href="https://x.com/CristoCoinToken"
-                  target="_blank"
-                  className="rounded-xl border border-purple-400 px-6 py-4 text-center font-black text-purple-100"
-                >
-                  Follow on X
-                </a>
-              </div>
-            </div>
+    <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/40 p-4">
+      <p className="text-sm font-bold uppercase tracking-widest text-purple-300">
+        Contract Address
+      </p>
 
-            <div className="flex justify-center">
-              <div className="relative flex h-80 w-80 items-center justify-center rounded-full border-4 border-[#D4AF37] bg-black shadow-[0_0_70px_#8247E5]">
-                <div className="absolute -top-8 h-4 w-32 rounded-full border-4 border-[#D4AF37] shadow-[0_0_25px_#D4AF37]" />
+      <p className="mt-2 break-all font-mono text-sm text-zinc-200">
+        {CONTRACT_ADDRESS}
+      </p>
+    </div>
 
-                <div className="text-center">
-                  <p className="text-6xl font-black text-[#D4AF37]">✝</p>
-                  <p className="mt-4 text-2xl font-black">$CRISTO</p>
-                  <p className="text-sm font-bold text-zinc-300">
-                    8-BIT MEME ENERGY
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+      <a
+        href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
+        target="_blank"
+        className="rounded-xl bg-[#D4AF37] px-6 py-4 text-center font-black text-black shadow-[0_0_25px_#D4AF3777] transition hover:scale-[1.02]"
+      >
+        View Contract
+      </a>
+
+      <a
+        href="https://x.com/CristoCoinToken"
+        target="_blank"
+        className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
+      >
+        Follow on X
+      </a>
+    </div>
+  </div>
+
+  <div className="flex justify-center">
+    <div className="relative">
+      <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
+      <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
+
+      <div className="relative flex h-80 w-80 items-center justify-center rounded-full border-4 border-[#D4AF37] bg-black shadow-[0_0_90px_#8247E5]">
+        <div className="absolute -top-8 h-4 w-32 rounded-full border-4 border-[#D4AF37] bg-black shadow-[0_0_25px_#D4AF37]" />
+
+        <div className="absolute inset-6 rounded-full border border-purple-500/30" />
+
+        <div className="text-center">
+          <p className="text-7xl font-black text-[#D4AF37] drop-shadow-[0_0_20px_#D4AF37]">
+            ✝
+          </p>
+
+          <p className="mt-5 text-3xl font-black">$CRISTO</p>
+
+          <p className="mt-1 text-sm font-black tracking-widest text-zinc-300">
+            ARCADE SHRINE
+          </p>
+
+          <p className="mt-4 text-xs font-bold text-purple-300">
+            MEME POWER ONLINE
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
             <div className="mb-8">
