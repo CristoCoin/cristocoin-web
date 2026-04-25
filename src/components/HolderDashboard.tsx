@@ -62,7 +62,10 @@ export function HolderDashboard() {
   }
 
   return (
-    <div className="rounded-2xl border border-purple-500/40 bg-black/60 p-6 shadow-[0_0_30px_#8247E522]">
+    <div
+  className="relative z-[9999] rounded-2xl border border-purple-500/40 bg-black/60 p-6 shadow-[0_0_30px_#8247E522]"
+  style={{ pointerEvents: "auto" }}
+>
       <h3 className="mb-2 text-2xl font-black text-purple-300">
         Holder Dashboard
       </h3>
@@ -76,12 +79,18 @@ export function HolderDashboard() {
       </p>
 
       <button
-        type="button"
-        onClick={connectWallet}
-        className="mb-6 w-full rounded-xl bg-purple-600 px-6 py-4 font-black text-white shadow-[0_0_25px_#8247E577]"
-      >
-        Connect Wallet Test
-      </button>
+  type="button"
+  onClick={connectWallet}
+  onPointerDown={() => setMessage("Button touched ✅")}
+  className="relative z-[10000] mb-6 w-full rounded-xl bg-purple-600 px-6 py-4 font-black text-white shadow-[0_0_25px_#8247E577]"
+  style={{
+    pointerEvents: "auto",
+    touchAction: "manipulation",
+    WebkitTapHighlightColor: "transparent",
+  }}
+>
+  Connect Wallet Test
+</button>
 
       <div className="rounded-xl border border-dashed border-purple-500/40 p-6 text-center text-zinc-300">
         {message}
