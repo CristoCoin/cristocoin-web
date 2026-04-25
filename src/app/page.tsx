@@ -25,7 +25,48 @@ export default function Home() {
     </p>
 
     <h2 className="text-3xl font-black text-white">
+     <section className="mx-auto mt-10 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
+  <div className="mb-6">
+    <p className="mb-2 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
+      Shrine Access
+    </p>
+
+    <h2 className="text-3xl font-black text-white">
       How to Enter the Shrine
+    </h2>
+
+    <p className="mt-3 text-zinc-300">
+      Best mobile experience: open MetaMask, go to Browser, visit
+      cristocoin-web.vercel.app and press Enter the Shrine.
+    </p>
+
+    <p className="mt-3 text-zinc-400">
+      Safari users can try WalletConnect. If MetaMask opens but no request
+      appears, return and use MetaMask Browser instead. Desktop users should use
+      Chrome or Brave with MetaMask extension, or connect with WalletConnect.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-5">
+    {[
+      "Open MetaMask",
+      "Tap Browser",
+      "Visit cristocoin-web.vercel.app",
+      "Enter the Shrine",
+      "Reveal your Arcade Rank",
+    ].map((step, index) => (
+      <div
+        key={step}
+        className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4"
+      >
+        <p className="mb-3 text-2xl font-black text-[#D4AF37]">
+          0{index + 1}
+        </p>
+        <p className="font-bold text-purple-100">{step}</p>
+      </div>
+    ))}
+  </div>
+</section>
     </h2>
 
     <p className="mt-3 text-zinc-300">

@@ -115,20 +115,34 @@ export function HolderDashboard() {
       </div>
 
       <ConnectButton.Custom>
-        {({ openConnectModal, account, mounted }) => {
-          const connected = mounted && account;
+  {({ openConnectModal, account, mounted, authenticationStatus }) => {
+    const connected =
+      mounted &&
+      account &&
+      (!authenticationStatus ||
+        authenticationStatus === "authenticated");
 
-          return (
-            <button
-              type="button"
-              onClick={() => openConnectModal?.()}
-              className="mb-6 w-full rounded-xl bg-purple-600 px-6 py-4 text-xl font-black text-white shadow-[0_0_25px_#8247E577] transition hover:bg-purple-500"
-            >
-              {connected ? "Shrine Entered ✅" : "Enter the Shrine"}
-            </button>
-          );
-        }}
-      </ConnectButton.Custom>
+    return (
+      <button
+        type="button"
+        onClick={() => openConnectModal?.()}
+        className="mb-3 w-full rounded-xl bg-purple-600 px-6 py-4 text-xl font-black text-white shadow-[0_0_25px_#8247E577] transition hover:bg-purple-500"
+      >
+        {connected ? "Shrine Entered ✅" : "Enter the Shrine"}
+      </button>
+    );
+  }}
+</ConnectButton.Custom>
+
+{isConnected && (
+  <button
+    type="button"
+    onClick={() => window.location.reload()}
+    className="mb-6 w-full rounded-xl border border-purple-400/60 bg-black/40 px-6 py-3 font-bold text-purple-100"
+  >
+    Refresh Shrine
+  </button>
+)}
 
       <div className="mb-6 rounded-xl border border-dashed border-purple-500/40 p-6 text-center text-zinc-300">
         {loading ? "Scanning..." : message}
