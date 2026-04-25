@@ -30,17 +30,34 @@ export function HolderDashboard() {
     }
 
     try {
-      setMessage("Requesting wallet connection...");
+      setMessage("Requesting wallet permission...");
 
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
 
-      setWallet(accounts[0]);
-      setMessage("Wallet connected ✅");
-    } catch (error) {
+      const selectedWallet = accounts[0];
+      setWallet(selectedWallet);
+
+      setMessage("Wallet connected ✅ Switching to Polygon...");
+
+      try {
+        await ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: "0x89" }],
+        });
+
+        setMessage("Wallet connected on Polygon ✅");
+      } catch (switchError: any) {
+        setMessage(
+          `Wallet connected, but Polygon switch failed: ${
+            switchError?.message || "Unknown error"
+          }`
+        );
+      }
+    } catch (error: any) {
       console.error(error);
-      setMessage("Wallet connection failed or was rejected.");
+      setMessage(`Connection failed: ${error?.message || "Unknown error"}`);
     }
   }
 
@@ -61,8 +78,6 @@ export function HolderDashboard() {
       <button
         type="button"
         onClick={connectWallet}
-        onTouchEnd={connectWallet}
-        onPointerUp={connectWallet}
         className="mb-6 w-full rounded-xl bg-purple-600 px-6 py-4 font-black text-white shadow-[0_0_25px_#8247E577]"
       >
         Connect Wallet Test
