@@ -1,5 +1,6 @@
 "use client";
 
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useEffect, useState } from "react";
 import { createPublicClient, erc20Abi, formatUnits, http } from "viem";
 import { polygon } from "viem/chains";
@@ -145,6 +146,26 @@ export function HolderDashboard() {
         >
           {loading ? "Scanning..." : wallet ? "Reveal My Rank" : "Connect Wallet"}
         </button>
+        <div className="relative z-[10000]">
+  <ConnectButton.Custom>
+    {({ openConnectModal, account, mounted }) => {
+      const ready = mounted && openConnectModal;
+const connected = ready && account;
+
+      return (
+        <button
+          type="button"
+          onClick={() => openConnectModal?.()}
+          className="mt-3 w-full rounded-xl border border-purple-400 bg-black/50 px-6 py-4 font-black text-purple-100 shadow-[0_0_20px_#8247E533]"
+        >
+          {connected
+            ? `WalletConnect: ${account.displayName}`
+            : "Connect with WalletConnect"}
+        </button>
+      );
+    }}
+  </ConnectButton.Custom>
+</div>
       </div>
 
       <div className="mb-4 rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 text-sm text-zinc-200">
