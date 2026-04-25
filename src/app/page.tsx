@@ -1,3 +1,4 @@
+import { HolderDashboard } from "@/components/HolderDashboard";
 import type { ReactNode } from "react";
 
 const contractAddress = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
@@ -15,6 +16,9 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#05070D] text-white">
       <section className="relative px-6 py-10 md:px-16 md:py-16">
+         <section className="px-6 pb-10 md:px-16">
+  <HolderDashboard />
+</section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3733,transparent_30%)]" />
 
         <nav className="relative z-10 flex items-center justify-between rounded-xl border border-purple-500/40 bg-black/40 px-4 py-3 backdrop-blur">
