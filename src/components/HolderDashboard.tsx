@@ -4,23 +4,34 @@ import { useEffect, useState } from "react";
 
 export function HolderDashboard() {
   const [message, setMessage] = useState("JavaScript loading...");
+  const [providerStatus, setProviderStatus] = useState("Checking provider...");
   const [wallet, setWallet] = useState("");
 
   useEffect(() => {
     setMessage("JavaScript is active ✅");
+
+    const ethereum = (window as any).ethereum;
+
+    if (ethereum) {
+      setProviderStatus("MetaMask / Ethereum provider detected ✅");
+    } else {
+      setProviderStatus("No wallet provider detected ❌");
+    }
   }, []);
 
   async function connectWallet() {
-    setMessage("Button clicked ✅");
+    setMessage("Button pressed ✅");
 
     const ethereum = (window as any).ethereum;
 
     if (!ethereum) {
-      setMessage("MetaMask not detected. Open inside MetaMask Browser.");
+      setMessage("No MetaMask detected. Open inside MetaMask Browser.");
       return;
     }
 
     try {
+      setMessage("Requesting wallet connection...");
+
       const accounts = await ethereum.request({
         method: "eth_requestAccounts",
       });
@@ -29,7 +40,7 @@ export function HolderDashboard() {
       setMessage("Wallet connected ✅");
     } catch (error) {
       console.error(error);
-      setMessage("Wallet connection failed or rejected.");
+      setMessage("Wallet connection failed or was rejected.");
     }
   }
 
@@ -39,14 +50,19 @@ export function HolderDashboard() {
         Holder Dashboard
       </h3>
 
-      <p className="mb-6 text-sm text-zinc-400">
+      <p className="mb-2 text-sm text-zinc-400">
         JavaScript and wallet connection test.
+      </p>
+
+      <p className="mb-6 rounded-xl border border-purple-500/30 bg-purple-950/30 p-3 text-sm text-zinc-200">
+        {providerStatus}
       </p>
 
       <button
         type="button"
         onClick={connectWallet}
-        onTouchStart={() => setMessage("Touch detected ✅")}
+        onTouchEnd={connectWallet}
+        onPointerUp={connectWallet}
         className="mb-6 w-full rounded-xl bg-purple-600 px-6 py-4 font-black text-white shadow-[0_0_25px_#8247E577]"
       >
         Connect Wallet Test
