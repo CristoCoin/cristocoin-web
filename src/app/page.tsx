@@ -1,5 +1,7 @@
 import { HolderDashboard } from "@/components/HolderDashboard";
 
+import { CopyContractButton } from "@/components/CopyContractButton";
+
 const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
 
 const tokenomics = [
@@ -64,15 +66,35 @@ export default function Home() {
      Enter the arcade shrine of CristoCoin. A community-powered memecoin on Polygon built for memes, culture and Web3 believers.
     </p>
 
-    <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/40 p-4">
-      <p className="text-sm font-bold uppercase tracking-widest text-purple-300">
-        Contract Address
+   <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/50 p-5 shadow-[0_0_25px_#8247E522]">
+  <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <p className="text-sm font-black uppercase tracking-widest text-purple-300">
+        Verified Contract
       </p>
 
-      <p className="mt-2 break-all font-mono text-sm text-zinc-200">
-        {CONTRACT_ADDRESS}
+      <p className="mt-1 text-xs text-zinc-400">
+        Official CristoCoin token address on Polygon.
       </p>
     </div>
+
+    <p className="rounded-lg border border-purple-500/30 bg-purple-950/30 px-3 py-2 font-mono text-xs text-purple-100">
+      0x03b192...39ba9
+    </p>
+  </div>
+
+  <div className="flex flex-col gap-3 sm:flex-row">
+    <CopyContractButton />
+
+    <a
+      href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
+      target="_blank"
+      className="rounded-xl border border-purple-400 bg-black/40 px-4 py-3 text-center text-sm font-black text-purple-100 transition hover:bg-purple-950/40"
+    >
+      View on PolygonScan
+    </a>
+  </div>
+</div>
 
     <div className="mt-8 flex flex-col gap-4 sm:flex-row">
       <a
