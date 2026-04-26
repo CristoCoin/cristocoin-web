@@ -38,9 +38,8 @@ export default function Home() {
               Follow on X
             </a>
           </nav>
-
-          <section className="grid gap-12 pt-16 md:grid-cols-2 md:items-center">
-
+<section className="grid gap-12 pt-16 md:grid-cols-2 md:items-center">
+  <div>
     <div className="mb-5 flex flex-wrap gap-3">
       <p className="inline-block rounded-lg border border-purple-400 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
         Built on Polygon
@@ -63,48 +62,50 @@ export default function Home() {
     </h2>
 
     <p className="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
-     Enter the arcade shrine of CristoCoin. A community-powered memecoin on Polygon built for memes, culture and Web3 believers.
+      Enter the arcade shrine of CristoCoin. A community-powered memecoin on
+      Polygon built for memes, culture and Web3 believers.
     </p>
 
-   <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/50 p-5 shadow-[0_0_25px_#8247E522]">
-  <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-    <div>
-      <p className="text-sm font-black uppercase tracking-widest text-purple-300">
-        Verified Contract
-      </p>
+    <div className="mt-8 rounded-2xl border border-purple-500/30 bg-black/50 p-5 shadow-[0_0_25px_#8247E522]">
+      <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p className="text-sm font-black uppercase tracking-widest text-purple-300">
+            Verified Contract
+          </p>
 
-      <p className="mt-1 text-xs text-zinc-400">
-        Official CristoCoin token address on Polygon.
-      </p>
+          <p className="mt-1 text-xs text-zinc-400">
+            Official CristoCoin token address on Polygon.
+          </p>
+        </div>
+
+        <p className="rounded-lg border border-purple-500/30 bg-purple-950/30 px-3 py-2 font-mono text-xs text-purple-100">
+          0x03b192...39ba9
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <CopyContractButton />
+
+        <a
+          href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
+          target="_blank"
+          className="rounded-xl border border-purple-400 bg-black/40 px-4 py-3 text-center text-sm font-black text-purple-100 transition hover:bg-purple-950/40"
+        >
+          View on PolygonScan
+        </a>
+      </div>
     </div>
 
-    <p className="rounded-lg border border-purple-500/30 bg-purple-950/30 px-3 py-2 font-mono text-xs text-purple-100">
-      0x03b192...39ba9
-    </p>
+    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+      <a
+        href="https://x.com/CristoCoinToken"
+        target="_blank"
+        className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
+      >
+        Follow on X
+      </a>
+    </div>
   </div>
-
-  <div className="flex flex-col gap-3 sm:flex-row">
-    <CopyContractButton />
-
-    <a
-      href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
-      target="_blank"
-      className="rounded-xl border border-purple-400 bg-black/40 px-4 py-3 text-center text-sm font-black text-purple-100 transition hover:bg-purple-950/40"
-    >
-      View on PolygonScan
-    </a>
-  </div>
-</div>
-
-   <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-  <a
-    href="https://x.com/CristoCoinToken"
-    target="_blank"
-    className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
-  >
-    Follow on X
-  </a>
-</div>
 
   <div className="flex justify-center">
     <div className="relative">
