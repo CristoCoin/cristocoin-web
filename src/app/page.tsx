@@ -40,7 +40,7 @@ export default function Home() {
           </nav>
 
           <section className="grid gap-12 pt-16 md:grid-cols-2 md:items-center">
-  <div>
+
     <div className="mb-5 flex flex-wrap gap-3">
       <p className="inline-block rounded-lg border border-purple-400 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
         Built on Polygon
@@ -147,33 +147,34 @@ export default function Home() {
               </h2>
 
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300">
-                The best mobile path is simple: open MetaMask, enter the built-in Browser, visit the shrine and connect your wallet. Safari users can try WalletConnect, but MetaMask Browser is the recommended route.
+               The shrine works best inside MetaMask Browser. Open MetaMask, enter the built-in browser, visit CristoCoin and reveal your rank.
               </p>
             </div>
 
             <div className="grid gap-4 md:grid-cols-5">
               {[
-                {
-                  title: "Open MetaMask",
-                  text: "Launch the MetaMask app on your phone.",
-                },
-                {
-                  title: "Tap Browser",
-                  text: "Use the built-in MetaMask browser.",
-                },
-                {
-                  title: "Visit Shrine",
-                  text: "Go to cristocoin-web.vercel.app.",
-                },
-                {
-                  title: "Enter",
-                  text: "Connect your wallet to the shrine.",
-                },
-                {
-                  title: "Reveal Rank",
-                  text: "Check your balance and Meme Power.",
-                },
-              ].map((step, index) => (
+  {
+    title: "Open MetaMask",
+    text: "Launch the MetaMask app.",
+  },
+  {
+    title: "Enter Browser",
+    text: "Use the built-in dApp browser.",
+  },
+  {
+    title: "Visit Shrine",
+    text: "Open cristocoin-web.vercel.app.",
+  },
+  {
+    title: "Connect Wallet",
+    text: "Enter the shrine with your wallet.",
+  },
+  {
+    title: "Reveal Rank",
+    text: "Unlock your Meme Power.",
+  },
+]
+.map((step, index) => (
                 <div
                   key={step.title}
                   className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4"
