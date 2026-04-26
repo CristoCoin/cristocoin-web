@@ -96,24 +96,15 @@ export default function Home() {
   </div>
 </div>
 
-    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-      <a
-        href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
-        target="_blank"
-        className="rounded-xl bg-[#D4AF37] px-6 py-4 text-center font-black text-black shadow-[0_0_25px_#D4AF3777] transition hover:scale-[1.02]"
-      >
-        View Contract
-      </a>
-
-      <a
-        href="https://x.com/CristoCoinToken"
-        target="_blank"
-        className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
-      >
-        Follow on X
-      </a>
-    </div>
-  </div>
+   <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+  <a
+    href="https://x.com/CristoCoinToken"
+    target="_blank"
+    className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
+  >
+    Follow on X
+  </a>
+</div>
 
   <div className="flex justify-center">
     <div className="relative">
