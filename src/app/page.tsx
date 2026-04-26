@@ -20,7 +20,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
 
         <div className="relative z-10 mx-auto max-w-6xl">
-          <HolderDashboard />
+
+          
 
           <nav className="mt-10 flex items-center justify-between rounded-2xl border border-purple-500/40 bg-black/40 p-4">
             <div>
@@ -137,6 +138,9 @@ export default function Home() {
   </div>
 </section>
 
+<div className="mt-14">
+  <HolderDashboard />
+</div>
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
             <div className="mb-8">
               <p className="mb-3 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
