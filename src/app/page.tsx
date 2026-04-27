@@ -119,7 +119,7 @@ export default function Home() {
 <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
   <div className="mb-8">
     <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
-      Arcade Missions
+      Shrine Missions
     </p>
 
     <h2 className="text-3xl font-black text-white">
