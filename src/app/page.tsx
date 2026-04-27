@@ -96,36 +96,18 @@ export default function Home() {
         </a>
       </div>
     </div>
-
-   
   </div>
 
-  <div className="flex justify-center">
+  <div className="flex items-center justify-center">
     <div className="relative">
       <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
       <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
 
-      <div className="relative flex h-80 w-80 items-center justify-center rounded-full border-4 border-[#D4AF37] bg-black shadow-[0_0_90px_#8247E5]">
-        <div className="absolute -top-8 h-4 w-32 rounded-full border-4 border-[#D4AF37] bg-black shadow-[0_0_25px_#D4AF37]" />
-
-        <div className="absolute inset-6 rounded-full border border-purple-500/30" />
-
-        <div className="text-center">
-          <p className="text-7xl font-black text-[#D4AF37] drop-shadow-[0_0_20px_#D4AF37]">
-            ✝
-          </p>
-
-          <p className="mt-5 text-3xl font-black">$CRISTO</p>
-
-          <p className="mt-1 text-sm font-black tracking-widest text-zinc-300">
-            ARCADE SHRINE
-          </p>
-
-          <p className="mt-4 text-xs font-bold text-purple-300">
-            MEME POWER ONLINE
-          </p>
-        </div>
-      </div>
+      <img
+        src="/cristocoin-hero.webp"
+        alt="CristoCoin official coin"
+        className="relative z-10 h-96 w-96 rounded-full object-cover shadow-[0_0_110px_#8247E5] md:h-[480px] md:w-[480px]"
+      />
     </div>
   </div>
 </section>
