@@ -23,18 +23,41 @@ export default function Home() {
 
           
 
-<nav className="flex items-center justify-between rounded-2xl border border-purple-500/40 bg-black/40 px-5 py-3 shadow-[0_0_25px_#8247E51A]">
-  <div>
-    <p className="text-lg font-black tracking-widest text-[#D4AF37]">
-      CristoCoin
-    </p>
-    <p className="text-sm text-purple-200">$CRISTO on Polygon</p>
+<nav className="flex items-center justify-between gap-4 rounded-2xl border border-purple-500/40 bg-black/30 px-4 py-3 shadow-[0_0_20px_#8247E522] backdrop-blur">
+  <div className="flex items-center gap-3">
+    <img
+      src="/cristocoin-logo-transparent.png"
+      alt="CristoCoin logo"
+      className="h-11 w-11 rounded-full border border-[#D4AF37]/50 shadow-[0_0_18px_#D4AF3733]"
+    />
+
+    <div>
+      <p className="text-lg font-black tracking-widest text-[#D4AF37]">
+        CristoCoin
+      </p>
+
+      <div className="mt-1 flex flex-wrap items-center gap-2">
+        <p className="text-sm text-purple-200">$CRISTO on Polygon</p>
+
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-purple-400/40 bg-purple-950/40 px-2 py-1 text-[10px] font-black uppercase tracking-widest text-purple-200">
+  <svg
+    viewBox="0 0 38 33"
+    className="h-3.5 w-3.5 text-purple-300"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M29.6 10.2c-.7-.4-1.6-.4-2.4 0l-5.5 3.2-3.7 2.1-5.5 3.2c-.7.4-1.6.4-2.4 0l-4.3-2.5c-.7-.4-1.2-1.2-1.2-2.1v-5c0-.8.4-1.6 1.2-2.1l4.3-2.5c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v3.2l3.7-2.1V7c0-.8-.4-1.6-1.2-2.1L12.7.4c-.7-.4-1.6-.4-2.4 0L2.4 4.9C1.7 5.3 1.2 6.1 1.2 7v9.1c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l5.5-3.2 3.7-2.1 5.5-3.2c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v5c0 .8-.4 1.6-1.2 2.1l-4.3 2.5c-.7.4-1.6.4-2.4 0L23 25.9c-.7-.4-1.2-1.2-1.2-2.1v-3.2l-3.7 2.1v3.2c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l7.8-4.5c.7-.4 1.2-1.2 1.2-2.1v-9.1c0-.8-.4-1.6-1.2-2.1l-7.7-4.5Z" />
+  </svg>
+  Polygon
+</span>
+      </div>
+    </div>
   </div>
 
   <a
     href="https://x.com/CristoCoinToken"
     target="_blank"
-    className="rounded-xl border border-purple-400 bg-black/30 px-4 py-2 text-sm font-bold text-purple-200 shadow-[0_0_15px_#8247E533]"
+    className="rounded-xl border border-purple-400 px-4 py-2 text-sm font-bold text-purple-200 transition hover:bg-purple-950/40"
   >
     Follow on X
   </a>
@@ -320,9 +343,28 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-purple-500/30 px-6 py-8 text-center text-sm text-purple-200">
-        Built on Polygon · CristoCoin $CRISTO · 2026
-      </footer>
+     <footer className="border-t border-purple-500/30 px-6 py-8 text-center text-sm text-purple-200">
+  <div className="flex flex-wrap items-center justify-center gap-2">
+    <span>Built on</span>
+
+    <span className="inline-flex items-center gap-1.5 font-black text-purple-100">
+      <svg
+        viewBox="0 0 38 33"
+        className="h-4 w-4 text-purple-300"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path d="M29.6 10.2c-.7-.4-1.6-.4-2.4 0l-5.5 3.2-3.7 2.1-5.5 3.2c-.7.4-1.6.4-2.4 0l-4.3-2.5c-.7-.4-1.2-1.2-1.2-2.1v-5c0-.8.4-1.6 1.2-2.1l4.3-2.5c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v3.2l3.7-2.1V7c0-.8-.4-1.6-1.2-2.1L12.7.4c-.7-.4-1.6-.4-2.4 0L2.4 4.9C1.7 5.3 1.2 6.1 1.2 7v9.1c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l5.5-3.2 3.7-2.1 5.5-3.2c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v5c0 .8-.4 1.6-1.2 2.1l-4.3 2.5c-.7.4-1.6.4-2.4 0L23 25.9c-.7-.4-1.2-1.2-1.2-2.1v-3.2l-3.7 2.1v3.2c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l7.8-4.5c.7-.4 1.2-1.2 1.2-2.1v-9.1c0-.8-.4-1.6-1.2-2.1l-7.7-4.5Z" />
+      </svg>
+      Polygon
+    </span>
+
+    <span>·</span>
+    <span>CristoCoin $CRISTO</span>
+    <span>·</span>
+    <span>2026</span>
+  </div>
+</footer>
     </main>
   );
 }
