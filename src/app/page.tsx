@@ -23,22 +23,22 @@ export default function Home() {
 
           
 
-          <nav className="mt-10 flex items-center justify-between rounded-2xl border border-purple-500/40 bg-black/40 p-4">
-            <div>
-              <p className="text-xl font-black tracking-widest text-[#D4AF37]">
-                CristoCoin
-              </p>
-              <p className="text-sm text-purple-200">$CRISTO on Polygon</p>
-            </div>
+<nav className="flex items-center justify-between rounded-2xl border border-purple-500/40 bg-black/40 px-5 py-3 shadow-[0_0_25px_#8247E51A]">
+  <div>
+    <p className="text-lg font-black tracking-widest text-[#D4AF37]">
+      CristoCoin
+    </p>
+    <p className="text-sm text-purple-200">$CRISTO on Polygon</p>
+  </div>
 
-            <a
-              href="https://x.com/CristoCoinToken"
-              target="_blank"
-              className="rounded-xl border border-purple-400 px-4 py-2 text-sm font-bold text-purple-200"
-            >
-              Follow on X
-            </a>
-          </nav>
+  <a
+    href="https://x.com/CristoCoinToken"
+    target="_blank"
+    className="rounded-xl border border-purple-400 bg-black/30 px-4 py-2 text-sm font-bold text-purple-200 shadow-[0_0_15px_#8247E533]"
+  >
+    Follow on X
+  </a>
+</nav>
 <section className="grid gap-12 pt-10 md:grid-cols-2 md:items-center">
   <div>
     <div className="mb-5 flex flex-wrap gap-3">
