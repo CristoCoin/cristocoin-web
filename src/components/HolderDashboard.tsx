@@ -109,12 +109,11 @@ export function HolderDashboard() {
   const memePower = getMemePower(currentBalance);
 
   return (
-    <section className="relative z-[9999] rounded-2xl border border-purple-500/40 bg-black/60 p-6 shadow-[0_0_30px_#8247E522]">
+    <section className="relative z-[9999] overflow-hidden rounded-3xl border border-purple-500/50 bg-gradient-to-br from-black via-purple-950/40 to-black p-6 shadow-[0_0_45px_#8247E533]">
       <div className="mb-6">
-        <h2 className="text-4xl font-black text-purple-300">
-          Arcade Shrine Access
-        </h2>
-
+        <h2 className="bg-gradient-to-r from-purple-200 via-white to-[#D4AF37] bg-clip-text text-4xl font-black text-transparent">
+  Arcade Shrine Access
+</h2>
         <p className="mt-3 text-zinc-400">
          Connect your wallet, scan your $CRISTO balance and unlock your arcade rank.
         </p>
@@ -153,20 +152,20 @@ export function HolderDashboard() {
     <button
       type="button"
       onClick={disconnectWallet}
-      className="w-full rounded-xl border border-red-400/60 bg-red-950/20 px-6 py-3 font-bold text-red-200 transition hover:bg-red-950/40"
+      className="w-full rounded-xl border border-red-400/50 bg-red-950/20 px-6 py-3 font-bold text-red-200 transition hover:bg-red-950/40 hover:shadow-[0_0_20px_#ff000033]"
     >
       Disconnect Wallet
     </button>
   </div>
 )}
 
-      <div className="mb-6 rounded-xl border border-dashed border-purple-500/40 p-6 text-center text-zinc-300">
-        {loading ? "Scanning..." : message}
-      </div>
+      <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-inner shadow-purple-950/40">
+  {loading ? "Scanning shrine signal..." : message}
+</div>
 
       {isConnected && address && (
         <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4">
+          <div className="rounded-2xl border border-purple-500/40 bg-black/40 p-5 shadow-[0_0_20px_#8247E51A]">
             <p className="text-sm text-purple-300">Wallet</p>
             <p className="mt-2 font-mono text-lg font-black text-white">
               {shortenAddress(address)}
