@@ -257,9 +257,9 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border border-purple-500/40 bg-black/50 p-6">
-              <h3 className="mb-4 text-2xl font-black text-purple-300">
+         <section className="mt-16 grid gap-6 md:grid-cols-2">
+            <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+              <h3 className="mb-4 text-2xl font-black text-white">
                 About CristoCoin
               </h3>
 
@@ -271,8 +271,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-purple-500/40 bg-black/50 p-6">
-              <h3 className="mb-4 text-2xl font-black text-purple-300">
+            <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+              <h3 className="mb-4 text-2xl font-black text-white">
                 Token Info
               </h3>
 
@@ -285,8 +285,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-purple-500/40 bg-black/50 p-6">
-              <h3 className="mb-4 text-2xl font-black text-purple-300">
+            <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+              <h3 className="mb-4 text-2xl font-black text-white">
                 Tokenomics
               </h3>
 
@@ -297,7 +297,7 @@ export default function Home() {
               </div>
             </div>
 
-<div className="rounded-2xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-6 shadow-[0_0_25px_#D4AF371A]">
+<div className="rounded-3xl border border-[#D4AF37]/50 bg-gradient-to-br from-[#D4AF37]/15 via-black to-purple-950/20 p-6 shadow-[0_0_35px_#D4AF3722]">
   <h3 className="mb-4 text-2xl font-black text-[#D4AF37]">
     Security Notice
   </h3>
@@ -310,8 +310,8 @@ export default function Home() {
   </p>
 </div>
 
-            <div className="rounded-2xl border border-purple-500/40 bg-black/50 p-6">
-              <h3 className="mb-4 text-2xl font-black text-purple-300">
+            <div className="rounded-3xl border border-purple-500/30 bg-black/60 p-6 shadow-[0_0_20px_#8247E511]">
+              <h3 className="mb-4 text-2xl font-black text-purple-200">
                 Disclaimer
               </h3>
 
