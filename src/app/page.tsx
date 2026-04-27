@@ -39,7 +39,7 @@ export default function Home() {
               Follow on X
             </a>
           </nav>
-<section className="grid gap-12 pt-16 md:grid-cols-2 md:items-center">
+<section className="grid gap-12 pt-10 md:grid-cols-2 md:items-center">
   <div>
     <div className="mb-5 flex flex-wrap gap-3">
       <p className="inline-block rounded-lg border border-purple-400 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
@@ -97,15 +97,7 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-      <a
-        href="https://x.com/CristoCoinToken"
-        target="_blank"
-        className="rounded-xl border border-purple-400 bg-black/40 px-6 py-4 text-center font-black text-purple-100 shadow-[0_0_20px_#8247E533] transition hover:scale-[1.02]"
-      >
-        Follow on X
-      </a>
-    </div>
+   
   </div>
 
   <div className="flex justify-center">
@@ -138,7 +130,7 @@ export default function Home() {
   </div>
 </section>
 
-<div className="mt-14">
+<div className="mt-20">
   <HolderDashboard />
 </div>
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
