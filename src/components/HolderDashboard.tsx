@@ -117,6 +117,9 @@ export function HolderDashboard() {
         <p className="mt-3 text-zinc-400">
          Connect your wallet, scan your $CRISTO balance and unlock your arcade rank.
         </p>
+        <p className="mt-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+  Read-only scan · No transaction required
+</p>
       </div>
 
       <ConnectButton.Custom>

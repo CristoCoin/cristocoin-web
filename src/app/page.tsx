@@ -238,6 +238,19 @@ export default function Home() {
               </div>
             </div>
 
+<div className="rounded-2xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 p-6 shadow-[0_0_25px_#D4AF371A]">
+  <h3 className="mb-4 text-2xl font-black text-[#D4AF37]">
+    Security Notice
+  </h3>
+
+  <p className="text-zinc-200">
+    CristoCoin will never ask for your seed phrase, private key or wallet
+    password. The dashboard only reads your public wallet balance to reveal
+    your arcade rank. Always verify the official contract on PolygonScan before
+    interacting.
+  </p>
+</div>
+
             <div className="rounded-2xl border border-purple-500/40 bg-black/50 p-6">
               <h3 className="mb-4 text-2xl font-black text-purple-300">
                 Disclaimer
