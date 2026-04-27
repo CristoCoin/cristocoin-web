@@ -116,8 +116,7 @@ export default function Home() {
   <HolderDashboard />
 </div>
 
-<section className="mx-auto mt-16 max-w-5xl rounded-3xl border border-[#D4AF37]/40 bg-gradient-to-br from-[#D4AF37]/10 via-purple-950/20 to-black p-6 shadow-[0_0_40px_#D4AF3722]">
-  <div className="mb-8">
+<section className="mx-auto mt-10 max-w-5xl rounded-3xl border border-[#D4AF37]/40 bg-gradient-to-br from-[#D4AF37]/10 via-purple-950/20 to-black p-6 shadow-[0_0_40px_#D4AF3722]">  <div className="mb-8">
     <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
       Shrine Missions
     </p>
