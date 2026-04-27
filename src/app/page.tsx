@@ -116,7 +116,7 @@ export default function Home() {
   <HolderDashboard />
 </div>
 
-<section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
+<section className="mx-auto mt-16 max-w-5xl rounded-3xl border border-[#D4AF37]/40 bg-gradient-to-br from-[#D4AF37]/10 via-purple-950/20 to-black p-6 shadow-[0_0_40px_#D4AF3722]">
   <div className="mb-8">
     <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
       Shrine Missions
@@ -192,10 +192,10 @@ export default function Home() {
     claims or transactions are required.
   </div>
 </section>
-
+<div className="mx-auto my-12 h-px max-w-4xl bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
             <div className="mb-8">
-              <p className="mb-3 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
+              <p className="mb-3 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-black text-purple-200">
                 Shrine Access
               </p>
 
