@@ -227,19 +227,7 @@ export function HolderDashboard() {
         </div>
       )}
 
-      <div className="mt-6 rounded-xl border border-purple-500/30 bg-purple-950/20 p-4 text-sm text-zinc-300">
-        <p className="mb-3 font-bold text-purple-200">
-          Need the $CRISTO contract?
-        </p>
-
-        <button
-          type="button"
-          onClick={copyContract}
-          className="rounded-lg border border-[#D4AF37] px-4 py-2 font-bold text-[#D4AF37]"
-        >
-          Copy Contract
-        </button>
-      </div>
+     
     </section>
   );
 }
