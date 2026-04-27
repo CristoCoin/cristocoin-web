@@ -140,10 +140,14 @@ export function HolderDashboard() {
 </ConnectButton.Custom>
 
 {isConnected && (
-  <div className="mb-6 grid gap-3 md:grid-cols-2">
+  <div className="mb-6 grid gap-3 md:grid-cols-3">
     <button
       type="button"
-      onClick={() => window.location.reload()}
+      onClick={() => {
+        if (address) {
+          readCristoBalance(address as `0x${string}`);
+        }
+      }}
       className="w-full rounded-xl border border-purple-400/60 bg-black/40 px-6 py-3 font-bold text-purple-100 transition hover:bg-purple-950/40"
     >
       Refresh Rank
@@ -151,14 +155,21 @@ export function HolderDashboard() {
 
     <button
       type="button"
+      onClick={() => window.location.reload()}
+      className="w-full rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-6 py-3 font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
+    >
+      Sync Wallet
+    </button>
+
+    <button
+      type="button"
       onClick={disconnectWallet}
-      className="w-full rounded-xl border border-red-400/50 bg-red-950/20 px-6 py-3 font-bold text-red-200 transition hover:bg-red-950/40 hover:shadow-[0_0_20px_#ff000033]"
+      className="w-full rounded-xl border border-red-400/50 bg-red-950/20 px-6 py-3 font-bold text-red-200 transition hover:bg-red-950/40"
     >
       Disconnect Wallet
     </button>
   </div>
 )}
-
       <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-inner shadow-purple-950/40">
   {loading ? "Scanning shrine signal..." : message}
 </div>
