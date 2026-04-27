@@ -116,79 +116,73 @@ export default function Home() {
   <HolderDashboard />
 </div>
 
-<section className="mx-auto mt-10 max-w-5xl rounded-3xl border border-[#D4AF37]/40 bg-gradient-to-br from-[#D4AF37]/10 via-purple-950/20 to-black p-6 shadow-[0_0_40px_#D4AF3722]">  <div className="mb-8">
-    <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
-      Shrine Missions
+<section className="mx-auto mt-14 max-w-5xl rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/30 to-black p-6 shadow-[0_0_35px_#8247E522]">
+  <div className="mb-8">
+    <p className="mb-3 inline-block rounded-lg border border-purple-400/60 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
+      Ecosystem Preview
     </p>
 
     <h2 className="text-3xl font-black text-white">
-      Start the Shrine Path
+      The Shrine Is Only the Beginning
     </h2>
 
     <p className="mt-3 max-w-3xl text-zinc-300">
-      Complete simple community missions and begin your CristoCoin journey.
-      These missions are visual for now, with future upgrades planned as the
-      shrine evolves.
+      CristoCoin is being shaped as a meme-powered arcade ecosystem. Future
+      modules may expand the shrine with daily rituals, visual missions and
+      collectible relics built around community participation.
     </p>
   </div>
 
-  <div className="grid gap-4 md:grid-cols-5">
+  <div className="grid gap-5 md:grid-cols-3">
     {[
       {
-        title: "Hold $CRISTO",
-        text: "Keep CristoCoin in your wallet.",
-        status: "Core",
+        title: "The Shrine Candle",
+        status: "Future Module",
+        icon: "🕯️",
+        text: "A daily ritual concept where holders may return to light the shrine, build symbolic streaks and awaken visual progress.",
       },
       {
-        title: "Reveal Rank",
-        text: "Scan your balance in the shrine.",
-        status: "Live",
+        title: "Mission Map",
+        status: "In Exploration",
+        icon: "🗺️",
+        text: "A future mission map for community actions, seasonal paths and shrine objectives connected to the CristoCoin journey.",
       },
       {
-        title: "Copy Contract",
-        text: "Save the official token address.",
-        status: "Live",
+        title: "Path Relics",
+        status: "Concept Stage",
+        icon: "🏺",
+        text: "Future collectible relics inspired by ranks, shrine progress, lore and community milestones.",
       },
-      {
-        title: "Follow on X",
-        text: "Join the public meme signal.",
-        status: "Social",
-      },
-      {
-        title: "Share Shrine",
-        text: "Invite others to discover it.",
-        status: "Soon",
-      },
-    ].map((mission, index) => (
+    ].map((module) => (
       <div
-        key={mission.title}
-        className="rounded-2xl border border-purple-500/30 bg-purple-950/30 p-4 transition hover:border-[#D4AF37]/60 hover:bg-purple-950/50"
+        key={module.title}
+        className="group rounded-2xl border border-purple-500/30 bg-black/40 p-5 shadow-[0_0_25px_#8247E511] transition hover:border-[#D4AF37]/60 hover:bg-purple-950/30 hover:shadow-[0_0_35px_#D4AF3722]"
       >
-        <div className="mb-4 flex items-center justify-between gap-3">
-          <p className="text-2xl font-black text-[#D4AF37]">
-            0{index + 1}
-          </p>
+        <div className="mb-5 flex items-center justify-between gap-3">
+          <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-2xl shadow-[0_0_20px_#D4AF371A]">
+            {module.icon}
+          </div>
 
-          <span className="rounded-full border border-purple-400/40 px-2 py-1 text-[10px] font-black uppercase tracking-widest text-purple-200">
-            {mission.status}
+          <span className="rounded-full border border-purple-400/40 bg-purple-950/30 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-purple-200">
+            {module.status}
           </span>
         </div>
 
-        <h3 className="mb-2 text-lg font-black text-white">
-          {mission.title}
+        <h3 className="mb-3 text-xl font-black text-white">
+          {module.title}
         </h3>
 
         <p className="text-sm leading-relaxed text-zinc-300">
-          {mission.text}
+          {module.text}
         </p>
       </div>
     ))}
   </div>
 
-  <div className="mt-6 rounded-xl border border-purple-500/30 bg-black/40 p-4 text-sm text-zinc-400">
-    <span className="font-bold text-purple-200">Note:</span>{" "}
-    Arcade Missions are currently visual community objectives. No rewards,
-    claims or transactions are required.
+  <div className="mt-6 rounded-xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 p-4 text-sm text-zinc-300">
+    <span className="font-bold text-[#D4AF37]">Important:</span>{" "}
+    These modules are ecosystem concepts. They do not represent guaranteed
+    rewards, financial benefits or required transactions.
   </div>
 </section>
 <div className="mx-auto my-12 h-px max-w-4xl bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
