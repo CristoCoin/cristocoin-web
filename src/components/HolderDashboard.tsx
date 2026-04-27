@@ -144,7 +144,7 @@ export function HolderDashboard() {
   <button
     type="button"
     onClick={() => window.location.reload()}
-    className="mt-3 w-full rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-6 py-3 font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
+    className="mt-3 w-full rounded-xl border border-[#D4AF37]/50 bg-black/30 px-6 py-3 text-sm font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/10"
   >
     Sync Wallet
   </button>
