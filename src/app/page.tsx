@@ -98,16 +98,16 @@ export default function Home() {
     </div>
   </div>
 
-  <div className="flex items-center justify-center">
+  <div className="flex items-center justify-center py-4 md:py-0">
     <div className="relative">
       <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
       <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
 
-      <img
-        src="/cristocoin-hero.webp"
-        alt="CristoCoin official coin"
-        className="relative z-10 h-96 w-96 rounded-full object-cover shadow-[0_0_110px_#8247E5] md:h-[480px] md:w-[480px]"
-      />
+    <img
+  src="/cristocoin-hero.webp"
+  alt="CristoCoin official coin"
+  className="relative z-10 h-64 w-64 rounded-full object-cover shadow-[0_0_70px_#8247E5] sm:h-80 sm:w-80 md:h-[460px] md:w-[460px] md:shadow-[0_0_110px_#8247E5]"
+/>
     </div>
   </div>
 </section>
