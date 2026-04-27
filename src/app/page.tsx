@@ -15,8 +15,21 @@ const tokenomics = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#05070D] text-white">
-      <section className="relative px-6 py-10 md:px-16 md:py-16">
+   <main className="relative min-h-screen overflow-hidden bg-[#05070D] text-white">
+    <div className="pointer-events-none fixed inset-0 z-0">
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),linear-gradient(180deg,#05070D_0%,#13051F_45%,#05070D_100%)]" />
+
+  <div className="absolute left-1/2 top-24 h-[520px] w-[520px] -translate-x-1/2 rounded-full border border-purple-400/10 shadow-[0_0_120px_#8247E544]" />
+
+  <div className="absolute right-10 top-1/3 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl" />
+
+  <div className="absolute left-10 top-2/3 h-72 w-72 rounded-full bg-purple-700/20 blur-3xl" />
+
+  <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(90deg,#D4AF37_1px,transparent_1px),linear-gradient(180deg,#8247E5_1px,transparent_1px)] bg-[size:80px_80px]" />
+
+  <div className="absolute inset-0 opacity-30 [background-image:radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:34px_34px]" />
+</div>
+      <section className="relative z-10 px-6 py-10 md:px-16 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
 
         <div className="relative z-10 mx-auto max-w-6xl">
