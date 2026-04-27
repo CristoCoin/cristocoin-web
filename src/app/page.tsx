@@ -310,7 +310,7 @@ export default function Home() {
   </p>
 </div>
 
-            <div className="rounded-3xl border border-purple-500/30 bg-black/60 p-6 shadow-[0_0_20px_#8247E511]">
+            <div className="rounded-3xl border border-purple-500/30 bg-black/60 p-6 shadow-[0_0_20px_#8247E511] md:col-span-2">
               <h3 className="mb-4 text-2xl font-black text-purple-200">
                 Disclaimer
               </h3>
