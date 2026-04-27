@@ -137,14 +137,15 @@ export function HolderDashboard() {
         {connected ? "Wallet Recognized ✅" : "Enter the Shrine"}
       </button>
      
-     <button
-  type="button"
-  onClick={() => window.location.reload()}
-  className="mt-3 w-full rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-6 py-3 font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
->
-  Sync Wallet
-
-</button>
+    {!connected && (
+  <button
+    type="button"
+    onClick={() => window.location.reload()}
+    className="mt-3 w-full rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-6 py-3 font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
+  >
+    Sync Wallet
+  </button>
+)}
      </> );
   }}
 </ConnectButton.Custom>
