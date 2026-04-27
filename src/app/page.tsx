@@ -115,6 +115,84 @@ export default function Home() {
 <div className="mt-10 md:mt-20">
   <HolderDashboard />
 </div>
+
+<section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
+  <div className="mb-8">
+    <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/70 bg-[#D4AF37]/10 px-3 py-1 text-sm font-black text-[#D4AF37]">
+      Arcade Missions
+    </p>
+
+    <h2 className="text-3xl font-black text-white">
+      Start the Shrine Path
+    </h2>
+
+    <p className="mt-3 max-w-3xl text-zinc-300">
+      Complete simple community missions and begin your CristoCoin journey.
+      These missions are visual for now, with future upgrades planned as the
+      shrine evolves.
+    </p>
+  </div>
+
+  <div className="grid gap-4 md:grid-cols-5">
+    {[
+      {
+        title: "Hold $CRISTO",
+        text: "Keep CristoCoin in your wallet.",
+        status: "Core",
+      },
+      {
+        title: "Reveal Rank",
+        text: "Scan your balance in the shrine.",
+        status: "Live",
+      },
+      {
+        title: "Copy Contract",
+        text: "Save the official token address.",
+        status: "Live",
+      },
+      {
+        title: "Follow on X",
+        text: "Join the public meme signal.",
+        status: "Social",
+      },
+      {
+        title: "Share Shrine",
+        text: "Invite others to discover it.",
+        status: "Soon",
+      },
+    ].map((mission, index) => (
+      <div
+        key={mission.title}
+        className="rounded-2xl border border-purple-500/30 bg-purple-950/30 p-4 transition hover:border-[#D4AF37]/60 hover:bg-purple-950/50"
+      >
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <p className="text-2xl font-black text-[#D4AF37]">
+            0{index + 1}
+          </p>
+
+          <span className="rounded-full border border-purple-400/40 px-2 py-1 text-[10px] font-black uppercase tracking-widest text-purple-200">
+            {mission.status}
+          </span>
+        </div>
+
+        <h3 className="mb-2 text-lg font-black text-white">
+          {mission.title}
+        </h3>
+
+        <p className="text-sm leading-relaxed text-zinc-300">
+          {mission.text}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <div className="mt-6 rounded-xl border border-purple-500/30 bg-black/40 p-4 text-sm text-zinc-400">
+    <span className="font-bold text-purple-200">Note:</span>{" "}
+    Arcade Missions are currently visual community objectives. No rewards,
+    claims or transactions are required.
+  </div>
+</section>
+
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
             <div className="mb-8">
               <p className="mb-3 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-bold text-purple-200">
