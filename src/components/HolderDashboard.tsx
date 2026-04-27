@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { createPublicClient, erc20Abi, formatUnits, http } from "viem";
 import { polygon } from "viem/chains";
-import { useAccount, useChainId, useSwitchChain } from "wagmi";
-
+import { useAccount, useChainId, useDisconnect, useSwitchChain } from "wagmi";
 const CRISTO_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9" as const;
 
 const publicClient = createPublicClient({
@@ -39,6 +38,7 @@ export function HolderDashboard() {
   const { address, isConnected } = useAccount();
   const chainId = useChainId();
   const { switchChainAsync } = useSwitchChain();
+  const { disconnect } = useDisconnect();
 
   const [message, setMessage] = useState("Connect your wallet to reveal your rank.");
   const [balance, setBalance] = useState<number | null>(null);
@@ -98,6 +98,12 @@ export function HolderDashboard() {
     setMessage("Contract copied ✅ Add $CRISTO manually in MetaMask if needed.");
   }
 
+  function disconnectWallet() {
+  disconnect();
+  setBalance(null);
+  setMessage("Wallet disconnected. Enter the shrine to reveal your rank.");
+}
+
   const currentBalance = balance ?? 0;
   const rank = getRank(currentBalance);
   const memePower = getMemePower(currentBalance);
@@ -135,13 +141,23 @@ export function HolderDashboard() {
 </ConnectButton.Custom>
 
 {isConnected && (
-  <button
-    type="button"
-    onClick={() => window.location.reload()}
-    className="mb-6 w-full rounded-xl border border-purple-400/60 bg-black/40 px-6 py-3 font-bold text-purple-100"
-  >
-    Refresh Rank
-  </button>
+  <div className="mb-6 grid gap-3 md:grid-cols-2">
+    <button
+      type="button"
+      onClick={() => window.location.reload()}
+      className="w-full rounded-xl border border-purple-400/60 bg-black/40 px-6 py-3 font-bold text-purple-100 transition hover:bg-purple-950/40"
+    >
+      Refresh Rank
+    </button>
+
+    <button
+      type="button"
+      onClick={disconnectWallet}
+      className="w-full rounded-xl border border-red-400/60 bg-red-950/20 px-6 py-3 font-bold text-red-200 transition hover:bg-red-950/40"
+    >
+      Disconnect Wallet
+    </button>
+  </div>
 )}
 
       <div className="mb-6 rounded-xl border border-dashed border-purple-500/40 p-6 text-center text-zinc-300">
