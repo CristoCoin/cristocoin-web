@@ -112,7 +112,7 @@ export default function Home() {
   </div>
 </section>
 
-<div className="mt-20">
+<div className="mt-10 md:mt-20">
   <HolderDashboard />
 </div>
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
