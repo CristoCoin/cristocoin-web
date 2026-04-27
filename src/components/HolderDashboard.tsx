@@ -59,7 +59,7 @@ export function HolderDashboard() {
       const formattedBalance = Number(formatUnits(rawBalance, 18));
 
       setBalance(formattedBalance);
-      setMessage("Your arcade rank has been revealed ✅");
+      setMessage("CristoCoin rank revealed ✅");
       setLoading(false);
     } catch (error: any) {
       console.error(error);
@@ -106,11 +106,11 @@ export function HolderDashboard() {
     <section className="relative z-[9999] rounded-2xl border border-purple-500/40 bg-black/60 p-6 shadow-[0_0_30px_#8247E522]">
       <div className="mb-6">
         <h2 className="text-4xl font-black text-purple-300">
-          Holder Dashboard
+          Arcade Shrine Access
         </h2>
 
         <p className="mt-3 text-zinc-400">
-          Enter the shrine, scan your wallet and reveal your CristoCoin arcade rank.
+         Connect your wallet, scan your $CRISTO balance and unlock your arcade rank.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ export function HolderDashboard() {
         onClick={() => openConnectModal?.()}
         className="mb-3 w-full rounded-xl bg-purple-600 px-6 py-4 text-xl font-black text-white shadow-[0_0_25px_#8247E577] transition hover:bg-purple-500"
       >
-        {connected ? "Shrine Entered ✅" : "Enter the Shrine"}
+        {connected ? "Wallet Recognized ✅" : "Enter the Shrine"}
       </button>
     );
   }}
@@ -140,7 +140,7 @@ export function HolderDashboard() {
     onClick={() => window.location.reload()}
     className="mb-6 w-full rounded-xl border border-purple-400/60 bg-black/40 px-6 py-3 font-bold text-purple-100"
   >
-    Refresh Shrine
+    Refresh Rank
   </button>
 )}
 
@@ -195,7 +195,7 @@ export function HolderDashboard() {
 
       <div className="mt-6 rounded-xl border border-purple-500/30 bg-purple-950/20 p-4 text-sm text-zinc-300">
         <p className="mb-3 font-bold text-purple-200">
-          Need to add $CRISTO manually?
+          Need the $CRISTO contract?
         </p>
 
         <button
@@ -203,7 +203,7 @@ export function HolderDashboard() {
           onClick={copyContract}
           className="rounded-lg border border-[#D4AF37] px-4 py-2 font-bold text-[#D4AF37]"
         >
-          Copy $CRISTO Contract
+          Copy Contract
         </button>
       </div>
     </section>
