@@ -246,64 +246,71 @@ export default function Home() {
   <HolderDashboard />
 </div>
 
+
+
+
 <section className="mx-auto mt-14 max-w-5xl rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/30 to-black p-6 shadow-[0_0_35px_#8247E522]">
   <div className="mb-8">
-    <p className="mb-3 inline-block rounded-lg border border-purple-400/60 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
-      Ecosystem Preview
-    </p>
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Ecosystem Preview
+  </p>
 
-    <h2 className="text-3xl font-black text-white">
-      The Shrine Is Only the Beginning
-    </h2>
+  <h2 className="text-3xl font-black text-white md:text-4xl">
+    The Shrine Is Only the Beginning
+  </h2>
 
-    <p className="mt-3 max-w-3xl text-zinc-300">
-      CristoCoin is being shaped as a meme-powered arcade ecosystem. Future
-      modules may expand the shrine with daily rituals, visual missions and
-      collectible relics built around community participation.
-    </p>
-  </div>
+  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
+    CristoCoin is being shaped as a meme-powered arcade ecosystem. Future modules may expand the shrine with daily rituals, visual missions, collectible relics and community milestone unlocks.
+  </p>
+</div>
 
-  <div className="grid gap-5 md:grid-cols-3">
+ <div className="grid gap-5 md:grid-cols-4">
     {[
-      {
-        title: "The Shrine Candle",
-        status: "Future Module",
-        icon: "🕯️",
-        text: "A daily ritual concept where holders may return to light the shrine, build symbolic streaks and awaken visual progress.",
-      },
-      {
-        title: "Mission Map",
-        status: "In Exploration",
-        icon: "🗺️",
-        text: "A future mission map for community actions, seasonal paths and shrine objectives connected to the CristoCoin journey.",
-      },
-      {
-        title: "Path Relics",
-        status: "Concept Stage",
-        icon: "🏺",
-        text: "Future collectible relics inspired by ranks, shrine progress, lore and community milestones.",
-      },
-    ].map((module) => (
+  {
+    title: "Shrine Candle",
+    status: "Daily Ritual",
+    icon: "🕯️",
+    text: "A daily ritual concept where holders may return to light the shrine and build symbolic streaks.",
+  },
+  {
+    title: "Mission Map",
+    status: "Community Quests",
+    icon: "🗺️",
+    text: "A future mission layer for community actions, seasonal paths and shrine objectives.",
+  },
+  {
+    title: "Path Relics",
+    status: "Collectible Progression",
+    icon: "🏺",
+    text: "Future collectible relics inspired by ranks, lore, community milestones and visual progress.",
+  },
+  {
+    title: "Milestones",
+    status: "Unlock Events",
+    icon: "⚡",
+    text: "Community milestone concepts that may unlock visual moments, rewards or new shrine stages.",
+  },
+].map((item) => (
       <div
-        key={module.title}
-        className="group rounded-2xl border border-purple-500/30 bg-black/40 p-5 shadow-[0_0_25px_#8247E511] transition hover:border-[#D4AF37]/60 hover:bg-purple-950/30 hover:shadow-[0_0_35px_#D4AF3722]"
-      >
+  key={item.title}
+  className="rounded-2xl border border-purple-500/30 bg-black/40 p-5 shadow-[0_0_22px_#8247E511] transition hover:-translate-y-1 hover:border-[#D4AF37]/45 hover:shadow-[0_0_28px_rgba(212,175,55,0.14)]"
+>
         <div className="mb-5 flex items-center justify-between gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-2xl shadow-[0_0_20px_#D4AF371A]">
-            {module.icon}
+            {item.icon}
           </div>
 
           <span className="rounded-full border border-purple-400/40 bg-purple-950/30 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-purple-200">
-            {module.status}
+            {item.status}
           </span>
         </div>
 
         <h3 className="mb-3 text-xl font-black text-white">
-          {module.title}
+          {item.title}
         </h3>
 
         <p className="text-sm leading-relaxed text-zinc-300">
-          {module.text}
+          {item.text}
         </p>
       </div>
     ))}
