@@ -249,7 +249,7 @@ export function HolderDashboard() {
 
   {rank === "Visitor" && (
     <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-      Awaiting first shrine signal.
+      Visitor phase active. Awaiting first shrine signal.
     </p>
   )}
 </div>
@@ -331,7 +331,7 @@ className="rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/15 px-5 py-3 text-
 
 {rank === "Visitor" && (
   <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-    Visitor energy detected. Meme Power activates when $CRISTO enters your wallet.
+    Visitor energy detected. Meme Power activates when $CRISTO enters your wallet or the first community drop begins.
   </p>
 )}
 
