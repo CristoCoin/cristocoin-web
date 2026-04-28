@@ -51,7 +51,7 @@ export default function Home() {
 
 </div>
 
-<section className="relative z-10 flex min-h-[90vh] items-center justify-center overflow-hidden px-6 py-20 text-center md:min-h-screen">
+<section className="relative px-6 pt-10 pb-4 md:min-h-screen md:px-16 md:py-16">
   <div className="pointer-events-none absolute inset-0">
     <div className="cloud-curtain-left absolute -left-40 top-0 h-56 w-[70%] rounded-full bg-white/12 blur-[80px]" />
 <div className="cloud-curtain-right absolute -right-40 bottom-0 h-56 w-[70%] rounded-full bg-purple-200/12 blur-[90px]" />
@@ -65,7 +65,7 @@ export default function Home() {
     <div className="absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
   </div>
 
- <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 backdrop-blur md:p-16">
+ <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-6 backdrop-blur md:p-10">
 
 
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -186,7 +186,7 @@ export default function Home() {
 
           <p className="mt-1 text-xs text-zinc-400">
             Official CristoCoin token address on Polygon.
-          </p>
+          </p> 
         </div>
 
         <p className="rounded-lg border border-purple-500/30 bg-purple-950/30 px-3 py-2 font-mono text-xs text-purple-100">
