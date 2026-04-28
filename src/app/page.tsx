@@ -343,7 +343,7 @@ export default function Home() {
   </h2>
 
   <p className="mt-4 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
-    The shrine works best inside the MetaMask mobile browser. Open MetaMask, use the built-in browser, visit CristoCoin and reveal your arcade rank through the read-only access panel.
+    The shrine works best inside the MetaMask mobile browser. Open MetaMask, use the built-in browser, visit CristoCoin and connect through the read-only access panel. Holders reveal rank. Visitors enter explore mode.
   </p>
 </div>
 
