@@ -55,13 +55,20 @@ export default function Home() {
     <div className="absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
   </div>
 
-  <div className="relative mx-auto max-w-3xl rounded-3xl border border-purple-500/40 bg-black/40 p-8 shadow-[0_0_45px_#8247E533] backdrop-blur md:p-12">
+ <div className="relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 shadow-[0_0_70px_#8247E555] backdrop-blur md:p-16">
+
+<img
+  src="/cristocoin-logo-transparent.png"
+  alt="CristoCoin logo"
+  className="mx-auto mb-5 h-16 w-16 rounded-full border border-[#D4AF37]/50 shadow-[0_0_30px_#D4AF3755]"
+/>
+
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
       Cloud Gate
     </p>
 
     <div className="hidden md:block">
-      <h1 className="text-5xl font-black leading-tight text-white md:text-7xl">
+      <h1 className="text-5xl font-black leading-tight text-white md:text-8xl">
         Enter the CristoCoin Shrine
       </h1>
 
