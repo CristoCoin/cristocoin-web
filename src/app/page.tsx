@@ -17,7 +17,7 @@ export default function Home() {
   return (
    <main className="relative min-h-screen overflow-hidden bg-[#05070D] text-white">
     <div className="pointer-events-none fixed inset-0 z-0">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),linear-gradient(180deg,#05070D_0%,#13051F_45%,#05070D_100%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),-glinear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
 
   <div className="absolute right-10 top-1/3 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
@@ -36,6 +36,12 @@ export default function Home() {
 <div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-purple-950/30 to-transparent" />
 
 <div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black/80 to-transparent" />
+
+ <div className="absolute -left-40 top-24 h-[520px] w-[520px] rounded-full bg-purple-500/20 blur-[130px]" />
+
+<div className="absolute left-[-10%] top-[45%] h-[420px] w-[700px] rotate-12 rounded-full bg-purple-300/10 blur-[120px]" />
+
+
 </div>
       <section className="relative z-10 px-6 py-10 md:px-16 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
