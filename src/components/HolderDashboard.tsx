@@ -62,7 +62,7 @@ export function HolderDashboard() {
       const formattedBalance = Number(formatUnits(rawBalance, 18));
 
       setBalance(formattedBalance);
-      setMessage("CristoCoin rank revealed ✅");
+      setMessage("Shrine signal revealed ✅");
       setLoading(false);
     } catch (error: any) {
       console.error(error);
