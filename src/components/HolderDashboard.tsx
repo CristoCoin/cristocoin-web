@@ -249,11 +249,18 @@ export function HolderDashboard() {
             <p className="text-sm text-purple-300">Arcade Rank</p>
             <p className="mt-2 text-2xl font-black text-white">{rank}</p>
 
-            {rank === "Cristo Guardian" && (
-              <p className="mt-3 text-sm text-purple-200">
-                You hold the full meme supply. The shrine recognizes you.
-              </p>
-            )}
+{rank === "Visitor" && (
+  <p className="mt-3 text-sm leading-relaxed text-purple-200">
+    No $CRISTO detected yet. Explore the shrine, follow CristoCoin on X and wait
+    for the first community drop.
+  </p>
+)}
+
+{rank === "Cristo Guardian" && (
+  <p className="mt-3 text-sm leading-relaxed text-purple-200">
+    You hold the full meme supply. The shrine recognizes you.
+  </p>
+)}
           </div>
 
           <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 md:col-span-3">
