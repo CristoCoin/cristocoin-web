@@ -101,9 +101,9 @@ export default function Home() {
 </section>
 
       <section className="relative z-10 px-6 py-10 md:px-16 md:py-16">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
 
-        <div className="relative z-10 mx-auto max-w-6xl">
+ <div className="relative z-10 mx-auto max-w-6xl">
 
           
 
@@ -241,7 +241,8 @@ export default function Home() {
 </div>
 </div>
 </section>
-
+</div>
+</section>
 <div className="mt-10 md:mt-20">
   <HolderDashboard />
 </div>
@@ -496,23 +497,35 @@ export default function Home() {
   </div>
 </div>
 
-            <div className="rounded-3xl border border-purple-500/30 bg-black/60 p-6 shadow-[0_0_20px_#8247E511] md:col-span-2">
-              <h3 className="mb-4 text-2xl font-black text-purple-200">
-                Disclaimer
-              </h3>
+                    <div className="rounded-3xl border border-[#D4AF37]/35 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_24px_rgba(212,175,55,0.12)] md:col-span-2">
+          <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+            Final Disclaimer
+          </p>
 
-              <p className="text-zinc-300">
-                CristoCoin is a memecoin created for entertainment and community
-                purposes. It is not an investment product. There are no promises
-                of profit, value, utility or future development. Nothing on this
-                website is financial advice. Always do your own research.
-              </p>
-            </div>
-          </section>
+          <h3 className="mb-4 text-2xl font-black text-white">
+            Disclaimer
+          </h3>
+
+          <div className="grid gap-4 text-sm leading-relaxed text-zinc-300 md:grid-cols-3">
+            <p>
+              CristoCoin is a memecoin created for entertainment, culture and
+              community purposes.
+            </p>
+
+            <p>
+              It is not an investment product. There are no promises of profit,
+              value, utility or future development.
+            </p>
+
+            <p>
+              Nothing on this website is financial advice. Always do your own
+              research before interacting with any Web3 application.
+            </p>
+          </div>
         </div>
       </section>
 
-     <footer className="border-t border-purple-500/30 px-6 py-8 text-center text-sm text-purple-200">
+      <footer className="border-t border-purple-500/30 px-6 py-8 text-center text-sm text-purple-200">
   <div className="flex flex-wrap items-center justify-center gap-2">
     <span>Built on</span>
 
