@@ -60,24 +60,6 @@ export default function Home() {
 
  <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 backdrop-blur md:p-16">
 
-<div className="coin-3d-scene gate-coin-size mx-auto mb-4">
-  <div className="coin-3d">
-    <div className="coin-3d-edge" />
-
-    <img
-      src="/cristocoin-hero.webp"
-      alt="CristoCoin coin"
-      className="coin-3d-face coin-3d-front"
-    />
-
-    <img
-      src="/cristocoin-hero.webp"
-      alt=""
-      aria-hidden="true"
-      className="coin-3d-face coin-3d-back"
-    />
-  </div>
-</div>
 
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
       Cloud Gate
@@ -222,7 +204,7 @@ export default function Home() {
 
     <div className="coin-3d-scene hero-coin-size">
       <div className="coin-3d">
-        <div className="coin-3d-edge" />
+      
 
         <img
           src="/cristocoin-hero.webp"
