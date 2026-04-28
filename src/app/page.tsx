@@ -23,9 +23,19 @@ export default function Home() {
 
   <div className="absolute left-10 top-2/3 h-72 w-72 rounded-full bg-purple-700/20 blur-3xl" />
 
-  <div className="absolute inset-0 opacity-[0.035] bg-[linear-gradient(90deg,#8247E5_1px,transparent_1px),linear-gradient(180deg,#8247E5_1px,transparent_1px)] bg-[size:96px_96px]" />
+  <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_20%_25%,#8247E533,transparent_28%),radial-gradient(circle_at_80%_20%,#D4AF371A,transparent_24%),radial-gradient(circle_at_50%_80%,#8247E522,transparent_30%)]" />
 
- <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:42px_42px]" />
+<div className="absolute -left-32 top-40 h-[420px] w-[420px] rounded-full bg-purple-700/20 blur-[90px]" />
+
+<div className="absolute -right-24 top-[30%] h-[360px] w-[360px] rounded-full bg-[#D4AF37]/10 blur-[100px]" />
+
+<div className="absolute left-1/2 top-[55%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-purple-900/20 blur-[120px]" />
+
+<div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(ellipse_at_center,#ffffff_0%,transparent_45%)]" />
+
+<div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-purple-950/30 to-transparent" />
+
+<div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black/80 to-transparent" />
 </div>
       <section className="relative z-10 px-6 py-10 md:px-16 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
