@@ -392,31 +392,49 @@ export default function Home() {
 
          <section className="mt-16 grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
-              <h3 className="mb-4 text-2xl font-black text-white">
-                About CristoCoin
-              </h3>
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Project Overview
+  </p>
 
-              <p className="text-zinc-300">
-                CristoCoin is a community-driven experimental memecoin on
-                Polygon. It was created as a cultural and meme-based crypto
-                project with no promises, no guarantees and no financial
-                expectations.
-              </p>
-            </div>
+  <h3 className="mb-4 text-2xl font-black text-white">
+    About CristoCoin
+  </h3>
+
+  <p className="text-sm leading-relaxed text-zinc-300 md:text-base">
+    CristoCoin is a community-driven experimental memecoin on Polygon, created
+    as a cultural, meme-powered and arcade-inspired Web3 project. It is built for
+    entertainment, community identity and playful on-chain culture.
+  </p>
+
+  <div className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-[#D4AF37]/10 p-4 text-xs leading-relaxed text-zinc-300">
+    <span className="font-black text-[#D4AF37]">Important:</span>{" "}
+    CristoCoin does not promise profit, value, utility or future development.
+    Nothing on this website is financial advice.
+  </div>
+</div>
 
             <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
-              <h3 className="mb-4 text-2xl font-black text-white">
-                Token Info
-              </h3>
+  <p className="mb-3 inline-block rounded-lg border border-purple-400/50 bg-purple-950/40 px-3 py-1 text-xs font-black uppercase tracking-widest text-purple-200">
+    Token Details
+  </p>
 
-              <div className="space-y-3 text-sm">
-                <Info label="Token Name" value="CristoCoin" />
-                <Info label="Symbol" value="CRISTO" />
-                <Info label="Network" value="Polygon" />
-                <Info label="Total Supply" value="1,000,000,000 CRISTO" />
-                <Info label="Contract" value={CONTRACT_ADDRESS} />
-              </div>
-            </div>
+  <h3 className="mb-4 text-2xl font-black text-white">
+    Token Info
+  </h3>
+
+  <div className="space-y-3 text-sm">
+    <Info label="Token Name" value="CristoCoin" />
+    <Info label="Symbol" value="$CRISTO" />
+    <Info label="Network" value="Polygon" />
+    <Info label="Total Supply" value="1,000,000,000 $CRISTO" />
+    <Info label="Contract" value={CONTRACT_ADDRESS} />
+  </div>
+
+  <p className="mt-5 rounded-2xl border border-purple-500/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
+    Always verify the contract address before interacting with any token or Web3
+    application.
+  </p>
+</div>
 
             <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
               <h3 className="mb-4 text-2xl font-black text-white">
@@ -487,9 +505,11 @@ export default function Home() {
 
 function Info({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex justify-between gap-4 border-b border-purple-500/20 py-2">
-      <span className="text-purple-300">{label}</span>
-      <span className="break-all text-right font-bold text-white">{value}</span>
+    <div className="grid gap-1 border-b border-purple-500/20 py-2 sm:grid-cols-[140px_1fr] sm:items-start">
+      <span className="text-zinc-400">{label}</span>
+      <span className="break-all text-left font-bold text-white sm:text-right">
+        {value}
+      </span>
     </div>
   );
 }
