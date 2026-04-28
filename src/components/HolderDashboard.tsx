@@ -259,9 +259,13 @@ The shrine reads your public wallet signal only. No transaction is required.
 </div>
 
           <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 md:col-span-3">
-            <p className="text-sm text-purple-300">Arcade Rank</p>
-            <p className="mt-2 text-2xl font-black text-white">{rank}</p>
+            <p className="text-sm text-purple-300">
+  {rank === "Visitor" ? "Visitor Pass" : "Arcade Rank"}
+</p>
 
+<p className="mt-2 text-2xl font-black text-white">
+  {rank === "Visitor" ? "Shrine Status: Awaiting Signal" : rank}
+</p>
 
 
 {rank === "Cristo Guardian" && (
@@ -274,13 +278,7 @@ The shrine reads your public wallet signal only. No transaction is required.
   <div className="rounded-2xl border border-[#D4AF37]/35 bg-gradient-to-br from-black via-purple-950/40 to-[#D4AF37]/10 p-5 shadow-[0_0_24px_rgba(212,175,55,0.12)] md:col-span-3">
     <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
       <div>
-        <p className="text-xs font-black uppercase tracking-widest text-[#D4AF37]">
-          Visitor Pass
-        </p>
-
-        <h3 className="mt-2 text-2xl font-black text-white">
-          Shrine Status: Awaiting Signal
-        </h3>
+        
 
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
           No $CRISTO detected yet. You can still explore the shrine, follow the
