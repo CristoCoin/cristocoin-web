@@ -43,6 +43,51 @@ export default function Home() {
 
 
 </div>
+
+<section className="relative z-10 flex min-h-screen items-center justify-center overflow-hidden px-6 text-center">
+  <div className="pointer-events-none absolute inset-0">
+    <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-purple-500/25 blur-[90px]" />
+    <div className="absolute -right-32 top-40 h-80 w-80 rounded-full bg-[#D4AF37]/15 blur-[100px]" />
+    <div className="absolute bottom-10 left-1/2 h-96 w-[720px] -translate-x-1/2 rounded-full bg-white/10 blur-[120px]" />
+
+    <div className="absolute left-[-20%] top-[18%] h-36 w-[75%] rounded-full bg-white/10 blur-3xl" />
+    <div className="absolute right-[-25%] top-[38%] h-44 w-[85%] rounded-full bg-purple-200/10 blur-3xl" />
+    <div className="absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
+  </div>
+
+  <div className="relative mx-auto max-w-3xl rounded-3xl border border-purple-500/40 bg-black/40 p-8 shadow-[0_0_45px_#8247E533] backdrop-blur md:p-12">
+    <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
+      Cloud Gate
+    </p>
+
+    <div className="hidden md:block">
+      <h1 className="text-5xl font-black leading-tight text-white md:text-7xl">
+        Enter the CristoCoin Shrine
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-300">
+        A meme-powered arcade ecosystem built on Polygon. Descend through the
+        clouds and discover the shrine below.
+      </p>
+    </div>
+
+    <div className="md:hidden">
+      <h1 className="text-4xl font-black leading-tight text-white">
+        Best experienced on desktop
+      </h1>
+
+      <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-300">
+        The full CristoCoin shrine experience is designed for larger screens.
+        You can still explore on mobile and enter the ecosystem below.
+      </p>
+    </div>
+
+    <p className="mt-8 text-sm font-black uppercase tracking-[0.25em] text-purple-200">
+      Scroll to continue
+    </p>
+  </div>
+</section>
+
       <section className="relative z-10 px-6 py-10 md:px-16 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF371F,transparent_35%)]" />
 
