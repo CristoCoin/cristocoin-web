@@ -200,27 +200,35 @@ export default function Home() {
 <div className="flex items-center justify-center py-4 md:py-0">
   <div className="relative">
     <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
-    <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
+  <div className="absolute -inset-2 rounded-full border border-purple-400/15" />
 
-    <div className="coin-3d-scene hero-coin-size">
-      <div className="coin-3d">
-      
-
-        <img
-          src="/cristocoin-hero.webp"
-          alt="CristoCoin official coin"
-          className="coin-3d-face coin-3d-front"
-        />
-
-        <img
-          src="/cristocoin-hero.webp"
-          alt=""
-          aria-hidden="true"
-          className="coin-3d-face coin-3d-back"
-        />
-      </div>
+   <div className="coin-3d-scene hero-coin-size">
+  <div className="coin-3d">
+    <div className="coin-thickness" aria-hidden="true">
+      {Array.from({ length: 15 }).map((_, i) => (
+  <span
+    key={i}
+    className="coin-slice"
+    style={{ transform: `translateZ(${(i - 7) * 0.65}px)` }}
+  />
+))}
     </div>
+
+    <img
+      src="/cristocoin-hero.webp"
+      alt="CristoCoin official coin"
+      className="coin-3d-face coin-3d-front"
+    />
+
+    <img
+      src="/cristocoin-hero.webp"
+      alt=""
+      aria-hidden="true"
+      className="coin-3d-face coin-3d-back"
+    />
   </div>
+</div>
+</div>
 </div>
 </section>
 
