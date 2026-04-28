@@ -257,11 +257,11 @@ export default function Home() {
   </p>
 
   <h2 className="text-3xl font-black text-white md:text-4xl">
-    The Shrine Is Only the Beginning
+    The Arcade Shrine Roadmap
   </h2>
 
   <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
-    CristoCoin is being shaped as a meme-powered arcade ecosystem. Future modules may expand the shrine with daily rituals, visual missions, collectible relics and community milestone unlocks.
+   CristoCoin is being shaped as a meme-powered arcade ecosystem. Future modules may expand the shrine with daily rituals, visual missions, collectible relics and community milestone unlocks for holders and visitors.
   </p>
 </div>
 
