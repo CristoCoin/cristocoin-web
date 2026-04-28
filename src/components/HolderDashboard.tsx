@@ -222,8 +222,12 @@ export function HolderDashboard() {
     </button>
   </div>
 )}
-  <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-[0_0_20px_#8247E51A]">
-  {loading ? "Scanning shrine signal..." : message}
+ <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-[0_0_20px_#8247E51A]">
+  <p>{loading ? "Scanning shrine signal..." : message}</p>
+
+  <p className="mt-3 inline-flex rounded-full border border-[#D4AF37]/35 bg-[#D4AF37]/10 px-3 py-1 text-[10px] font-black uppercase tracking-widest text-[#D4AF37]">
+    Read-only scan · No transaction
+  </p>
 </div>
 
 <div className="mb-6 rounded-xl border border-[#D4AF37]/30 bg-black/35 px-4 py-3 text-sm leading-relaxed text-zinc-300">
