@@ -202,7 +202,7 @@ export default function Home() {
           target="_blank"
           className="rounded-xl border border-purple-400 bg-black/40 px-4 py-3 text-center text-sm font-black text-purple-100 transition hover:bg-purple-950/40"
         >
-          View on PolygonScan
+          Verify on PolygonScan
         </a>
       </div>
     </div>
