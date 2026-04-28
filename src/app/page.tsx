@@ -362,13 +362,13 @@ export default function Home() {
     text: "Open the official CristoCoin website.",
   },
   {
-    title: "Connect Wallet",
-    text: "Connect your wallet from the access panel.",
-  },
-  {
-    title: "Reveal Rank",
-    text: "Run the read-only scan and reveal your rank.",
-  },
+  title: "Connect Wallet",
+  text: "Connect through the read-only access panel.",
+},
+{
+  title: "Reveal Status",
+  text: "Holders reveal rank. Visitors enter explore mode.",
+},
 ].map((step, index) => (
                <div
   key={step.title}
