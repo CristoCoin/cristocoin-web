@@ -40,7 +40,9 @@ export function HolderDashboard() {
   const { switchChainAsync } = useSwitchChain();
   const { disconnect } = useDisconnect();
 
-  const [message, setMessage] = useState("Connect your wallet to reveal your rank.");
+  const [message, setMessage] = useState(
+  "Enter the shrine to scan your wallet, reveal your rank or join as a Visitor."
+);
   const [balance, setBalance] = useState<number | null>(null);
   const [loading, setLoading] = useState(false);
 
