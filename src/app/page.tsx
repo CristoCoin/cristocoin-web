@@ -16,6 +16,13 @@ const tokenomics = [
 export default function Home() {
   return (
    <main className="relative min-h-screen overflow-hidden bg-[#05070D] text-white">
+
+<div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+  <div className="ambient-cloud ambient-cloud-a absolute left-[-12%] top-[18%] h-56 w-[55%] rounded-full bg-white/8 blur-3xl" />
+  <div className="ambient-cloud ambient-cloud-b absolute right-[-18%] top-[35%] h-72 w-[65%] rounded-full bg-purple-300/10 blur-3xl" />
+  <div className="ambient-cloud ambient-cloud-c absolute left-[18%] top-[58%] h-48 w-[50%] rounded-full bg-[#D4AF37]/7 blur-3xl" />
+</div>
+
     <div className="pointer-events-none fixed inset-0 z-0">
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),-glinear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
 
@@ -139,8 +146,11 @@ export default function Home() {
     Follow on X
   </a>
 </nav>
-<section className="grid gap-12 pt-10 md:grid-cols-2 md:items-center">
-  <div>
+
+
+
+<section className="relative grid gap-12 pt-10 md:grid-cols-2 md:items-center">  
+  <div className="relative z-10">
     <div className="mb-5 flex flex-wrap gap-3">
       <p className="inline-block rounded-lg border border-purple-400 bg-purple-950/40 px-3 py-1 text-sm font-black text-purple-200">
         Built on Polygon
@@ -197,7 +207,7 @@ export default function Home() {
       </div>
     </div>
   </div>
-<div className="flex items-center justify-center py-4 md:py-0">
+<div className="relative z-10 flex items-center justify-center py-4 md:py-0">
   <div className="relative">
     <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
   <div className="absolute -inset-2 rounded-full border border-purple-400/15" />
