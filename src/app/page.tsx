@@ -44,7 +44,7 @@ export default function Home() {
 
 </div>
 
-<section className="relative z-10 flex min-h-screen items-center justify-center overflow-hidden px-6 text-center">
+<section className="relative z-10 flex min-h-[90vh] items-center justify-center overflow-hidden px-6 py-20 text-center md:min-h-screen">
   <div className="pointer-events-none absolute inset-0">
     <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-purple-500/25 blur-[90px]" />
     <div className="absolute -right-32 top-40 h-80 w-80 rounded-full bg-[#D4AF37]/15 blur-[100px]" />
