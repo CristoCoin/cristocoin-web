@@ -119,10 +119,10 @@ export function HolderDashboard() {
     Arcade Shrine Access
   </h2>
 
-  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
-    Connect your wallet, scan your $CRISTO balance and reveal your arcade rank.
-    The shrine uses a read-only scan. No transaction is required.
-  </p>
+  <p className="mt-3 text-zinc-400">
+  Connect your wallet to reveal your $CRISTO balance, arcade rank and meme power.
+  This is a read-only check. No transaction is required.
+</p>
 </div> 
 
 <div className="mb-8 grid gap-3 md:grid-cols-3">
@@ -130,12 +130,12 @@ export function HolderDashboard() {
     {
       step: "01",
       title: "Connect Wallet",
-      text: "Enter through your Web3 wallet flow.",
+      text: "Enter through your Web3 wallet.",
     },
     {
       step: "02",
-      title: "Scan $CRISTO",
-      text: "Read-only balance scan. No transaction.",
+      title: "Read Balance",
+      text: "Check your public $CRISTO balance.",
     },
     {
       step: "03",
