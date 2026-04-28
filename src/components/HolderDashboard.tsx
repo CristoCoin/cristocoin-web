@@ -111,18 +111,57 @@ export function HolderDashboard() {
   return (
     <section className="relative z-[9999] overflow-hidden rounded-3xl border border-purple-500/50 bg-gradient-to-br from-black via-purple-950/40 to-black p-6 shadow-[0_0_45px_#8247E533]">
       <div className="mb-6">
-        <h2 className="bg-gradient-to-r from-purple-200 via-white to-[#D4AF37] bg-clip-text text-4xl font-black text-transparent">
-  Arcade Shrine Access
-</h2>
-        <p className="mt-3 text-zinc-400">
-         Connect your wallet, scan your $CRISTO balance and unlock your arcade rank.
-        </p>
-        <p className="mt-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
-  Read-only scan · No transaction required
-</p>
-      </div>
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Shrine Access
+  </p>
 
-      <ConnectButton.Custom>
+  <h2 className="bg-gradient-to-r from-purple-200 via-white to-[#D4AF37] bg-clip-text text-4xl font-black text-transparent">
+    Arcade Shrine Access
+  </h2>
+
+  <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
+    Connect your wallet, scan your $CRISTO balance and reveal your arcade rank.
+    The shrine uses a read-only scan. No transaction is required.
+  </p>
+</div> 
+
+<div className="mb-8 grid gap-3 md:grid-cols-3">
+  {[
+    {
+      step: "01",
+      title: "Connect Wallet",
+      text: "Enter through your Web3 wallet flow.",
+    },
+    {
+      step: "02",
+      title: "Scan $CRISTO",
+      text: "Read-only balance scan. No transaction.",
+    },
+    {
+      step: "03",
+      title: "Reveal Rank",
+      text: "Unlock your arcade identity.",
+    },
+  ].map((item) => (
+    <div
+      key={item.step}
+      className="rounded-2xl border border-purple-500/30 bg-black/35 p-4"
+    >
+      <p className="mb-2 text-xl font-black text-[#D4AF37]">
+        {item.step}
+      </p>
+      <h3 className="text-sm font-black text-white">
+        {item.title}
+      </h3>
+      <p className="mt-2 text-xs leading-relaxed text-zinc-400">
+        {item.text}
+      </p>
+    </div>
+  ))}
+</div>
+
+
+<ConnectButton.Custom>
   {({ openConnectModal, account, mounted, authenticationStatus }) => {
     const connected =
       mounted &&
@@ -141,13 +180,15 @@ export function HolderDashboard() {
       </button>
      
     {!connected && (
+ <div className="mt-3 mb-5 flex justify-center">
   <button
     type="button"
     onClick={() => window.location.reload()}
-    className="mt-3 w-full rounded-xl border border-[#D4AF37]/50 bg-black/30 px-6 py-3 text-sm font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/10"
+    className="rounded-xl border border-[#D4AF37]/45 bg-black/30 px-5 py-2 text-xs font-black uppercase tracking-widest text-[#D4AF37] transition hover:bg-[#D4AF37]/10 hover:text-yellow-200"
   >
-    Sync Wallet
+    Refresh Wallet Status
   </button>
+</div>
 )}
      </> );
   }}
@@ -178,8 +219,14 @@ export function HolderDashboard() {
     </button>
   </div>
 )}
-      <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-inner shadow-purple-950/40">
+  <div className="mb-6 rounded-2xl border border-dashed border-purple-500/50 bg-black/40 p-6 text-center text-lg font-bold text-purple-100 shadow-[0_0_20px_#8247E51A]">
   {loading ? "Scanning shrine signal..." : message}
+</div>
+
+<div className="mb-6 rounded-xl border border-[#D4AF37]/30 bg-black/35 px-4 py-3 text-sm leading-relaxed text-zinc-300">
+  <span className="font-black text-[#D4AF37]">Security note:</span>{" "}
+  This shrine is designed as a read-only visual access flow. Always verify links,
+  wallet prompts and contract addresses before interacting with any Web3 app.
 </div>
 
       {isConnected && address && (
