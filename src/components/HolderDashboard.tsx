@@ -241,7 +241,7 @@ export function HolderDashboard() {
             </p>
           </div>
 
-          <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4">
+          <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 md:col-span-2">
   <p className="text-sm text-purple-300">Your $CRISTO Balance</p>
   <p className="mt-2 text-2xl font-black text-[#D4AF37]">
     {balance === null ? "..." : `${currentBalance.toLocaleString()} $CRISTO`}
@@ -254,7 +254,7 @@ export function HolderDashboard() {
   )}
 </div>
 
-          <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4">
+          <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 md:col-span-3">
             <p className="text-sm text-purple-300">Arcade Rank</p>
             <p className="mt-2 text-2xl font-black text-white">{rank}</p>
 
