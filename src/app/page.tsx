@@ -25,17 +25,17 @@ export default function Home() {
 
   <div className="absolute inset-0 opacity-70 bg-[radial-gradient(circle_at_20%_25%,#8247E533,transparent_28%),radial-gradient(circle_at_80%_20%,#D4AF371A,transparent_24%),radial-gradient(circle_at_50%_80%,#8247E522,transparent_30%)]" />
 
-<div className="absolute -left-32 top-40 h-[420px] w-[420px] rounded-full bg-purple-700/20 blur-[90px]" />
+<div className="cloud-drift-left absolute -left-32 top-20 h-72 w-72 rounded-full bg-purple-500/25 blur-[90px]" />
 
-<div className="absolute -right-24 top-[30%] h-[360px] w-[360px] rounded-full bg-[#D4AF37]/10 blur-[100px]" />
+<div className="cloud-drift-right absolute -right-32 top-40 h-80 w-80 rounded-full bg-[#D4AF37]/15 blur-[100px]" />
 
-<div className="absolute left-1/2 top-[55%] h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-purple-900/20 blur-[120px]" />
+<div className="shrine-pulse absolute bottom-10 left-1/2 h-96 w-[720px] rounded-full bg-white/10 blur-[120px]" />
 
-<div className="absolute inset-0 opacity-[0.06] bg-[radial-gradient(ellipse_at_center,#ffffff_0%,transparent_45%)]" />
+<div className="cloud-drift-right absolute left-[-20%] top-[18%] h-36 w-[75%] rounded-full bg-white/10 blur-3xl" />
 
-<div className="absolute inset-x-0 top-0 h-64 bg-gradient-to-b from-purple-950/30 to-transparent" />
+<div className="cloud-drift-left absolute right-[-25%] top-[38%] h-44 w-[85%] rounded-full bg-purple-200/10 blur-3xl" />
 
-<div className="absolute inset-x-0 bottom-0 h-80 bg-gradient-to-t from-black/80 to-transparent" />
+<div className="cloud-drift-right absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
  <div className="absolute -left-40 top-24 h-[520px] w-[520px] rounded-full bg-purple-500/20 blur-[130px]" />
 
@@ -55,7 +55,7 @@ export default function Home() {
     <div className="absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
   </div>
 
- <div className="relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 shadow-[0_0_70px_#8247E555] backdrop-blur md:p-16">
+ <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 backdrop-blur md:p-16">
 
 <img
   src="/cristocoin-logo-transparent.png"
@@ -89,9 +89,9 @@ export default function Home() {
       </p>
     </div>
 
-    <p className="mt-8 text-sm font-black uppercase tracking-[0.25em] text-purple-200">
-      Scroll to continue
-    </p>
+    <p className="scroll-hint mt-8 text-sm font-black uppercase tracking-[0.25em] text-purple-200">
+  Scroll to continue
+</p>
   </div>
 </section>
 
