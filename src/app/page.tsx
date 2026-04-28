@@ -323,26 +323,29 @@ export default function Home() {
   </div>
 </section>
 <div className="mx-auto my-12 h-px max-w-4xl bg-gradient-to-r from-transparent via-purple-400/50 to-transparent" />
+        
+        
+        
           <section className="mx-auto mt-14 max-w-5xl rounded-2xl border border-purple-500/40 bg-black/50 p-6 shadow-[0_0_30px_#8247E522]">
             <div className="mb-8">
-              <p className="mb-3 inline-block rounded-lg border border-purple-400 px-3 py-1 text-sm font-black text-purple-200">
-                Shrine Access
-              </p>
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Shrine Access Guide
+  </p>
 
-              <h2 className="text-3xl font-black text-white">
-                How to Enter the Shrine
-              </h2>
+  <h2 className="text-3xl font-black text-white md:text-4xl">
+    How to Enter the Shrine
+  </h2>
 
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-zinc-300">
-               The shrine works best inside MetaMask Browser. Open MetaMask, enter the built-in browser, visit CristoCoin and reveal your rank.
-              </p>
-            </div>
+  <p className="mt-4 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
+    The shrine works best inside the MetaMask mobile browser. Open MetaMask, use the built-in browser, visit CristoCoin and reveal your arcade rank through the read-only access panel.
+  </p>
+</div>
 
             <div className="grid gap-4 md:grid-cols-5">
               {[
   {
     title: "Open MetaMask",
-    text: "Launch the MetaMask app.",
+    text: "Launch the MetaMask mobile app.",
   },
   {
     title: "Enter Browser",
@@ -350,22 +353,21 @@ export default function Home() {
   },
   {
     title: "Visit Shrine",
-    text: "Open cristocoin-web.vercel.app.",
+    text: "Open the official CristoCoin website.",
   },
   {
     title: "Connect Wallet",
-    text: "Enter the shrine with your wallet.",
+    text: "Connect your wallet from the access panel.",
   },
   {
     title: "Reveal Rank",
-    text: "Unlock your Meme Power.",
+    text: "Run the read-only scan and reveal your rank.",
   },
-]
-.map((step, index) => (
-                <div
-                  key={step.title}
-                  className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4"
-                >
+].map((step, index) => (
+               <div
+  key={step.title}
+  className="rounded-2xl border border-purple-500/40 bg-purple-950/30 p-5 shadow-[0_0_18px_#8247E511]"
+ >
                   <p className="mb-3 text-2xl font-black text-[#D4AF37]">
                     0{index + 1}
                   </p>
