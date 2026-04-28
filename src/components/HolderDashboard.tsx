@@ -5,7 +5,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { createPublicClient, erc20Abi, formatUnits, http } from "viem";
 import { polygon } from "viem/chains";
 import { useAccount, useChainId, useDisconnect, useSwitchChain } from "wagmi";
-const CRISTO_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9" as const;
+const CRISTO_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
 
 const publicClient = createPublicClient({
   chain: polygon,
