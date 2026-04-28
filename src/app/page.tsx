@@ -436,29 +436,64 @@ export default function Home() {
   </p>
 </div>
 
-            <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
-              <h3 className="mb-4 text-2xl font-black text-white">
-                Tokenomics
-              </h3>
+       <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Supply Layout
+  </p>
 
-              <div className="space-y-3">
-                {tokenomics.map((item) => (
-                  <Info key={item.label} label={item.label} value={item.value} />
-                ))}
-              </div>
-            </div>
+  <h3 className="mb-4 text-2xl font-black text-white">
+    Tokenomics
+  </h3>
+
+  <div className="space-y-4">
+    {tokenomics.map((item) => (
+      <div key={item.label}>
+        <div className="mb-2 flex items-center justify-between gap-4 text-sm">
+          <span className="font-bold text-zinc-300">{item.label}</span>
+          <span className="font-black text-white">{item.value}</span>
+        </div>
+
+        <div className="h-2 overflow-hidden rounded-full bg-purple-950/60">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-[#D4AF37] via-yellow-300 to-purple-300 shadow-[0_0_14px_rgba(212,175,55,0.35)]"
+            style={{ width: item.value }}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <p className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
+    Tokenomics are shown for transparency and presentation purposes. They do not
+    represent financial guarantees, expected value or investment advice.
+  </p>
+</div>
 
 <div className="rounded-3xl border border-[#D4AF37]/50 bg-gradient-to-br from-[#D4AF37]/15 via-black to-purple-950/20 p-6 shadow-[0_0_35px_#D4AF3722]">
+  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-black/30 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+    Wallet Safety
+  </p>
+
   <h3 className="mb-4 text-2xl font-black text-[#D4AF37]">
     Security Notice
   </h3>
 
-  <p className="text-zinc-200">
-    CristoCoin will never ask for your seed phrase, private key or wallet
-    password. The dashboard only reads your public wallet balance to reveal
-    your arcade rank. Always verify the official contract on PolygonScan before
-    interacting.
-  </p>
+  <div className="space-y-3 text-sm leading-relaxed text-zinc-200 md:text-base">
+    <p>
+      CristoCoin will never ask for your seed phrase, private key or wallet
+      password.
+    </p>
+
+    <p>
+      The dashboard only reads your public wallet balance to reveal your arcade
+      rank. No transaction is required for the shrine scan.
+    </p>
+
+    <p className="rounded-2xl border border-[#D4AF37]/25 bg-black/35 p-4 text-xs text-zinc-300">
+      Always verify the official contract on PolygonScan before interacting
+      with any token or Web3 application.
+    </p>
+  </div>
 </div>
 
             <div className="rounded-3xl border border-purple-500/30 bg-black/60 p-6 shadow-[0_0_20px_#8247E511] md:col-span-2">
