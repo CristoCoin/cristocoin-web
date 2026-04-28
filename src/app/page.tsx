@@ -243,7 +243,7 @@ export default function Home() {
 </section>
 </div>
 </section>
-<div className="relative z-0 mx-auto mt-10 max-w-5xl px-6 md:mt-20 md:px-0">
+<div className="mx-auto mt-10 max-w-5xl px-6 md:mt-20 md:px-0">
   <HolderDashboard />
 </div>
 
