@@ -139,12 +139,13 @@ export default function Home() {
   </div>
 
   <a
-    href="https://x.com/CristoCoinToken"
-    target="_blank"
-    className="rounded-xl border border-purple-400 px-4 py-2 text-sm font-bold text-purple-200 transition hover:bg-purple-950/40"
-  >
-    Follow on X
-  </a>
+  href="https://x.com/CristoCoinToken"
+  target="_blank"
+  className="rounded-xl border border-purple-400 px-4 py-2 text-sm font-bold text-purple-200 transition hover:bg-purple-950/40"
+>
+  <span className="hidden sm:inline">Follow on X</span>
+  <span className="sm:hidden">Follow X</span>
+</a>
 </nav>
 
 
