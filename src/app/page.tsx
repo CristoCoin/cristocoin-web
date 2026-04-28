@@ -525,26 +525,34 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-purple-500/30 px-6 py-8 text-center text-sm text-purple-200">
-  <div className="flex flex-wrap items-center justify-center gap-2">
-    <span>Built on</span>
+      <footer className="border-t border-purple-500/30 px-6 py-8 text-sm text-purple-200">
+  <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 rounded-2xl border border-purple-500/30 bg-black/30 px-5 py-5 text-center md:flex-row md:text-left">
+    <div>
+      <p className="font-black text-white">
+        CristoCoin <span className="text-[#D4AF37]">$CRISTO</span>
+      </p>
+      <p className="mt-1 text-xs text-purple-200/80">
+        Built on Polygon · Community arcade memecoin · 2026
+      </p>
+    </div>
 
-    <span className="inline-flex items-center gap-1.5 font-black text-purple-100">
-      <svg
-        viewBox="0 0 38 33"
-        className="h-4 w-4 text-purple-300"
-        fill="currentColor"
-        aria-hidden="true"
+    <div className="flex flex-wrap items-center justify-center gap-3 text-xs font-black uppercase tracking-widest">
+      <a
+        href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
+        target="_blank"
+        className="rounded-full border border-[#D4AF37]/40 px-3 py-2 text-[#D4AF37] transition hover:bg-[#D4AF37]/10"
       >
-        <path d="M29.6 10.2c-.7-.4-1.6-.4-2.4 0l-5.5 3.2-3.7 2.1-5.5 3.2c-.7.4-1.6.4-2.4 0l-4.3-2.5c-.7-.4-1.2-1.2-1.2-2.1v-5c0-.8.4-1.6 1.2-2.1l4.3-2.5c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v3.2l3.7-2.1V7c0-.8-.4-1.6-1.2-2.1L12.7.4c-.7-.4-1.6-.4-2.4 0L2.4 4.9C1.7 5.3 1.2 6.1 1.2 7v9.1c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l5.5-3.2 3.7-2.1 5.5-3.2c.7-.4 1.6-.4 2.4 0l4.3 2.5c.7.4 1.2 1.2 1.2 2.1v5c0 .8-.4 1.6-1.2 2.1l-4.3 2.5c-.7.4-1.6.4-2.4 0L23 25.9c-.7-.4-1.2-1.2-1.2-2.1v-3.2l-3.7 2.1v3.2c0 .8.4 1.6 1.2 2.1l7.8 4.5c.7.4 1.6.4 2.4 0l7.8-4.5c.7-.4 1.2-1.2 1.2-2.1v-9.1c0-.8-.4-1.6-1.2-2.1l-7.7-4.5Z" />
-      </svg>
-      Polygon
-    </span>
+        Verify
+      </a>
 
-    <span>·</span>
-    <span>CristoCoin $CRISTO</span>
-    <span>·</span>
-    <span>2026</span>
+      <a
+        href="https://x.com/CristoCoinToken"
+        target="_blank"
+        className="rounded-full border border-purple-400/40 px-3 py-2 text-purple-100 transition hover:bg-purple-950/40"
+      >
+        X
+      </a>
+    </div>
   </div>
 </footer>
     </main>
