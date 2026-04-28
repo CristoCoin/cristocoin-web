@@ -85,17 +85,16 @@ export default function Home() {
 
     <div className="md:hidden">
       <h1 className="text-4xl font-black leading-tight text-white">
-        Best experienced on desktop
+        Desktop Shrine Recommended
       </h1>
 
       <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-zinc-300">
-        The full CristoCoin shrine experience is designed for larger screens.
-        You can still explore on mobile and enter the ecosystem below.
+        For the full arcade shrine experience, use a larger screen. Mobile visitors can still explore the ecosystem, connect and reveal their rank below.
       </p>
     </div>
 
     <p className="scroll-hint mt-8 text-sm font-black uppercase tracking-[0.25em] text-purple-200">
-  Scroll to continue
+  ENTER BELOW
 </p>
   </div>
 </section>
