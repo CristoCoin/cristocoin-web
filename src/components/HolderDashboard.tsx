@@ -253,19 +253,27 @@ export function HolderDashboard() {
             <p className="mt-2 text-2xl font-black text-white">{rank}</p>
 
 {rank === "Visitor" && (
-  <div className="mt-3 space-y-3">
-    <p className="text-sm leading-relaxed text-purple-200">
-      No $CRISTO detected yet. Explore the shrine, follow CristoCoin on X and
-      wait for the first community drop.
+  <div className="mt-4 rounded-2xl border border-purple-500/25 bg-black/35 p-4">
+    <p className="text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+      Visitor Pass
     </p>
 
-    <a
-      href={CRISTO_X_URL}
-      target="_blank"
-      className="inline-flex rounded-xl border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
-    >
-      Follow First Drop
-    </a>
+    <div className="mt-3 space-y-2 text-sm text-zinc-300">
+      <p>
+        <span className="font-bold text-purple-200">Shrine Status:</span>{" "}
+        Awaiting Signal
+      </p>
+
+      <p>
+        <span className="font-bold text-purple-200">First Drop:</span>{" "}
+        Not announced yet
+      </p>
+
+      <p>
+        <span className="font-bold text-purple-200">Access:</span>{" "}
+        Explore mode
+      </p>
+    </div>
   </div>
 )}
 
