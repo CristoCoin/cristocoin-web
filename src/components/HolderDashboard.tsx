@@ -119,12 +119,12 @@ export function HolderDashboard() {
   </p>
 
   <h2 className="bg-gradient-to-r from-purple-200 via-white to-[#D4AF37] bg-clip-text text-4xl font-black text-transparent">
-    Arcade Shrine Access
+    CristoCoin Shrine Access
   </h2>
 
   <p className="mt-3 text-zinc-400">
-  Connect your wallet to reveal your $CRISTO balance, arcade rank and meme power.
-  This is a read-only check. No transaction is required.
+ Connect your wallet to reveal your $CRISTO balance, arcade rank and meme power.
+The shrine reads your public wallet signal only. No transaction is required.
 </p>
 </div> 
 
