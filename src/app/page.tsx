@@ -263,6 +263,11 @@ export default function Home() {
   <p className="mt-3 max-w-3xl text-sm leading-relaxed text-zinc-300 md:text-base">
    CristoCoin is being shaped as a meme-powered arcade ecosystem. Future modules may expand the shrine with daily rituals, visual missions, collectible relics and community milestone unlocks for holders and visitors.
   </p>
+
+<div className="mt-4 inline-flex rounded-full border border-purple-400/35 bg-purple-950/35 px-4 py-2 text-xs font-black uppercase tracking-widest text-purple-200">
+  Current Phase: Shrine Foundation
+</div>
+
 </div>
 
  <div className="grid gap-5 md:grid-cols-4">
