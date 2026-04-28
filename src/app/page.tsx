@@ -46,6 +46,9 @@ export default function Home() {
 
 <section className="relative z-10 flex min-h-[90vh] items-center justify-center overflow-hidden px-6 py-20 text-center md:min-h-screen">
   <div className="pointer-events-none absolute inset-0">
+    <div className="cloud-curtain-left absolute -left-40 top-0 h-56 w-[70%] rounded-full bg-white/12 blur-[80px]" />
+<div className="cloud-curtain-right absolute -right-40 bottom-0 h-56 w-[70%] rounded-full bg-purple-200/12 blur-[90px]" />
+    
     <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-purple-500/25 blur-[90px]" />
     <div className="absolute -right-32 top-40 h-80 w-80 rounded-full bg-[#D4AF37]/15 blur-[100px]" />
     <div className="absolute bottom-10 left-1/2 h-96 w-[720px] -translate-x-1/2 rounded-full bg-white/10 blur-[120px]" />
@@ -57,11 +60,15 @@ export default function Home() {
 
  <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 backdrop-blur md:p-16">
 
-<img
-  src="/cristocoin-logo-transparent.png"
-  alt="CristoCoin logo"
-  className="mx-auto mb-5 h-16 w-16 rounded-full border border-[#D4AF37]/50 shadow-[0_0_30px_#D4AF3755]"
-/>
+<div className="coin-descent relative mx-auto mb-6 flex h-20 w-20 items-center justify-center">
+  <div className="absolute inset-[-18px] rounded-full bg-[#D4AF37]/20 blur-2xl" />
+  <div className="absolute inset-[-8px] rounded-full border border-[#D4AF37]/30" />
+  <img
+    src="/cristocoin-logo-transparent.png"
+    alt="CristoCoin logo"
+    className="relative z-10 h-16 w-16 rounded-full border border-[#D4AF37]/60 shadow-[0_0_35px_#D4AF3766]"
+  />
+</div>
 
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
       Cloud Gate

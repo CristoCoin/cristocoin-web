@@ -121,3 +121,85 @@ body {
   animation: scroll-hint 1.8s ease-in-out infinite;
   will-change: transform, opacity;
 }
+
+
+
+@keyframes coin-descent {
+  0% {
+    transform: translateY(-14px) scale(0.96);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateY(8px) scale(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-14px) scale(0.96);
+    opacity: 0.85;
+  }
+}
+
+@keyframes heavenly-ray {
+  0% {
+    opacity: 0.18;
+    transform: translateX(-50%) scaleY(0.92);
+  }
+  50% {
+    opacity: 0.42;
+    transform: translateX(-50%) scaleY(1.08);
+  }
+  100% {
+    opacity: 0.18;
+    transform: translateX(-50%) scaleY(0.92);
+  }
+}
+
+@keyframes cloud-curtain-left {
+  0% {
+    transform: translate3d(-30px, 0, 0) scale(1);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate3d(60px, 16px, 0) scale(1.08);
+    opacity: 0.72;
+  }
+  100% {
+    transform: translate3d(-30px, 0, 0) scale(1);
+    opacity: 0.38;
+  }
+}
+
+@keyframes cloud-curtain-right {
+  0% {
+    transform: translate3d(30px, 0, 0) scale(1);
+    opacity: 0.38;
+  }
+  50% {
+    transform: translate3d(-60px, -16px, 0) scale(1.08);
+    opacity: 0.72;
+  }
+  100% {
+    transform: translate3d(30px, 0, 0) scale(1);
+    opacity: 0.38;
+  }
+}
+
+.coin-descent {
+  animation: coin-descent 5.5s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.heavenly-ray {
+  animation: heavenly-ray 6s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.cloud-curtain-left {
+  animation: cloud-curtain-left 13s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.cloud-curtain-right {
+  animation: cloud-curtain-right 15s ease-in-out infinite;
+  will-change: transform, opacity;
+}
