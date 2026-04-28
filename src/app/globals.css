@@ -27,86 +27,97 @@ body {
 
 @keyframes cloud-drift-left {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(-40px, 0, 0) scale(1);
+    opacity: 0.45;
   }
   50% {
-    transform: translate3d(36px, -18px, 0) scale(1.08);
+    transform: translate3d(80px, -30px, 0) scale(1.18);
+    opacity: 0.8;
   }
   100% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(-40px, 0, 0) scale(1);
+    opacity: 0.45;
   }
 }
 
 @keyframes cloud-drift-right {
   0% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(50px, 0, 0) scale(1);
+    opacity: 0.45;
   }
   50% {
-    transform: translate3d(-42px, 20px, 0) scale(1.06);
+    transform: translate3d(-90px, 35px, 0) scale(1.15);
+    opacity: 0.75;
   }
   100% {
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(50px, 0, 0) scale(1);
+    opacity: 0.45;
   }
 }
 
 @keyframes shrine-pulse {
   0% {
-    opacity: 0.45;
-    transform: translateX(-50%) scale(1);
+    opacity: 0.25;
+    transform: translateX(-50%) scale(0.9);
   }
   50% {
     opacity: 0.75;
-    transform: translateX(-50%) scale(1.08);
+    transform: translateX(-50%) scale(1.18);
   }
   100% {
-    opacity: 0.45;
-    transform: translateX(-50%) scale(1);
+    opacity: 0.25;
+    transform: translateX(-50%) scale(0.9);
   }
 }
 
 @keyframes gate-glow {
   0% {
-    box-shadow: 0 0 55px #8247e544;
+    box-shadow: 0 0 35px #8247e544, 0 0 0px #d4af3700;
   }
   50% {
-    box-shadow: 0 0 90px #8247e577;
+    box-shadow: 0 0 95px #8247e588, 0 0 35px #d4af3733;
   }
   100% {
-    box-shadow: 0 0 55px #8247e544;
+    box-shadow: 0 0 35px #8247e544, 0 0 0px #d4af3700;
   }
 }
 
 @keyframes scroll-hint {
   0% {
-    opacity: 0.55;
+    opacity: 0.45;
     transform: translateY(0);
   }
   50% {
     opacity: 1;
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
   100% {
-    opacity: 0.55;
+    opacity: 0.45;
     transform: translateY(0);
   }
 }
 
 .cloud-drift-left {
-  animation: cloud-drift-left 14s ease-in-out infinite;
+  animation: cloud-drift-left 8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .cloud-drift-right {
-  animation: cloud-drift-right 16s ease-in-out infinite;
+  animation: cloud-drift-right 9s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .shrine-pulse {
-  animation: shrine-pulse 8s ease-in-out infinite;
+  animation: shrine-pulse 5s ease-in-out infinite;
+  will-change: transform, opacity;
 }
 
 .gate-glow {
-  animation: gate-glow 6s ease-in-out infinite;
+  animation: gate-glow 4s ease-in-out infinite;
+  will-change: box-shadow;
 }
 
 .scroll-hint {
-  animation: scroll-hint 2.2s ease-in-out infinite;
+  animation: scroll-hint 1.8s ease-in-out infinite;
+  will-change: transform, opacity;
 }
