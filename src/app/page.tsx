@@ -268,29 +268,29 @@ export default function Home() {
  <div className="grid gap-5 md:grid-cols-4">
     {[
   {
-    title: "Shrine Candle",
-    status: "Daily Ritual",
-    icon: "🕯️",
-    text: "A daily ritual concept where holders may return to light the shrine and build symbolic streaks.",
-  },
-  {
-    title: "Mission Map",
-    status: "Community Quests",
-    icon: "🗺️",
-    text: "A future mission layer for community actions, seasonal paths and shrine objectives.",
-  },
-  {
-    title: "Path Relics",
-    status: "Collectible Progression",
-    icon: "🏺",
-    text: "Future collectible relics inspired by ranks, lore, community milestones and visual progress.",
-  },
-  {
-    title: "Milestones",
-    status: "Unlock Events",
-    icon: "⚡",
-    text: "Community milestone concepts that may unlock visual moments, rewards or new shrine stages.",
-  },
+  title: "Shrine Candle",
+  status: "Daily Ritual",
+  icon: "🕯️",
+  text: "A future daily ritual where the community may return to light the shrine and build symbolic streaks.",
+},
+{
+  title: "Mission Map",
+  status: "Community Quests",
+  icon: "🗺️",
+  text: "A future quest layer for community actions, seasonal paths and shrine objectives.",
+},
+{
+  title: "Path Relics",
+  status: "Collectible Progression",
+  icon: "🏺",
+  text: "Future collectible relics inspired by ranks, lore, milestone progress and shrine identity.",
+},
+{
+  title: "Milestones",
+  status: "Unlock Events",
+  icon: "⚡",
+  text: "Community milestone concepts that may unlock visual moments, shrine stages or symbolic rewards.",
+},
 ].map((item) => (
       <div
   key={item.title}
