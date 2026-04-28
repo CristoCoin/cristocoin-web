@@ -252,36 +252,60 @@ export function HolderDashboard() {
             <p className="text-sm text-purple-300">Arcade Rank</p>
             <p className="mt-2 text-2xl font-black text-white">{rank}</p>
 
-{rank === "Visitor" && (
-  <div className="mt-4 rounded-2xl border border-purple-500/25 bg-black/35 p-4">
-    <p className="text-xs font-black uppercase tracking-widest text-[#D4AF37]">
-      Visitor Pass
-    </p>
 
-    <div className="mt-3 space-y-2 text-sm text-zinc-300">
-      <p>
-        <span className="font-bold text-purple-200">Shrine Status:</span>{" "}
-        Awaiting Signal
-      </p>
-
-      <p>
-        <span className="font-bold text-purple-200">First Drop:</span>{" "}
-        Not announced yet
-      </p>
-
-      <p>
-        <span className="font-bold text-purple-200">Access:</span>{" "}
-        Explore mode
-      </p>
-    </div>
-  </div>
-)}
 
 {rank === "Cristo Guardian" && (
   <p className="mt-3 text-sm leading-relaxed text-purple-200">
     You hold the full meme supply. The shrine recognizes you.
   </p>
 )}
+
+{rank === "Visitor" && (
+  <div className="rounded-2xl border border-[#D4AF37]/35 bg-gradient-to-br from-black via-purple-950/40 to-[#D4AF37]/10 p-5 shadow-[0_0_24px_rgba(212,175,55,0.12)] md:col-span-3">
+    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div>
+        <p className="text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+          Visitor Pass
+        </p>
+
+        <h3 className="mt-2 text-2xl font-black text-white">
+          Shrine Status: Awaiting Signal
+        </h3>
+
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-300">
+          No $CRISTO detected yet. You can still explore the shrine, follow the
+          project and wait for the first community drop.
+        </p>
+      </div>
+
+      <a
+        href="https://x.com/CristoCoinToken"
+        target="_blank"
+        className="rounded-xl border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-5 py-3 text-center text-xs font-black uppercase tracking-widest text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
+      >
+        Follow First Drop
+      </a>
+    </div>
+
+    <div className="mt-5 grid gap-3 text-sm md:grid-cols-3">
+      <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+        <p className="text-purple-300">First Drop</p>
+        <p className="mt-1 font-black text-white">Not announced yet</p>
+      </div>
+
+      <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+        <p className="text-purple-300">Access</p>
+        <p className="mt-1 font-black text-white">Explore mode</p>
+      </div>
+
+      <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+        <p className="text-purple-300">Meme Power</p>
+        <p className="mt-1 font-black text-white">Awaiting $CRISTO</p>
+      </div>
+    </div>
+  </div>
+)}
+
           </div>
 
           <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4 md:col-span-3">
@@ -298,6 +322,13 @@ export function HolderDashboard() {
                 style={{ width: `${memePower}%` }}
               />
             </div>
+
+{rank === "Visitor" && (
+  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+    Visitor energy detected. Meme Power activates when $CRISTO enters your wallet.
+  </p>
+)}
+
           </div>
         </div>
       )}
