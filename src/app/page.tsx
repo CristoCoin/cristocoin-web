@@ -60,14 +60,23 @@ export default function Home() {
 
  <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-8 backdrop-blur md:p-16">
 
-<div className="coin-descent relative mx-auto mb-6 flex h-20 w-20 items-center justify-center">
-  <div className="absolute inset-[-18px] rounded-full bg-[#D4AF37]/20 blur-2xl" />
-  <div className="absolute inset-[-8px] rounded-full border border-[#D4AF37]/30" />
-  <img
-    src="/cristocoin-logo-transparent.png"
-    alt="CristoCoin logo"
-    className="relative z-10 h-16 w-16 rounded-full border border-[#D4AF37]/60 shadow-[0_0_35px_#D4AF3766]"
-  />
+<div className="coin-3d-scene gate-coin-size mx-auto mb-4">
+  <div className="coin-3d">
+    <div className="coin-3d-edge" />
+
+    <img
+      src="/cristocoin-hero.webp"
+      alt="CristoCoin coin"
+      className="coin-3d-face coin-3d-front"
+    />
+
+    <img
+      src="/cristocoin-hero.webp"
+      alt=""
+      aria-hidden="true"
+      className="coin-3d-face coin-3d-back"
+    />
+  </div>
 </div>
 
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -206,19 +215,31 @@ export default function Home() {
       </div>
     </div>
   </div>
+<div className="flex items-center justify-center py-4 md:py-0">
+  <div className="relative">
+    <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
+    <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
 
-  <div className="flex items-center justify-center py-4 md:py-0">
-    <div className="relative">
-      <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
-      <div className="absolute -inset-4 rounded-full border border-purple-400/30" />
+    <div className="coin-3d-scene hero-coin-size">
+      <div className="coin-3d">
+        <div className="coin-3d-edge" />
 
-    <img
-  src="/cristocoin-hero.webp"
-  alt="CristoCoin official coin"
-  className="relative z-10 h-64 w-64 rounded-full object-cover shadow-[0_0_70px_#8247E5] sm:h-80 sm:w-80 md:h-[460px] md:w-[460px] md:shadow-[0_0_110px_#8247E5]"
-/>
+        <img
+          src="/cristocoin-hero.webp"
+          alt="CristoCoin official coin"
+          className="coin-3d-face coin-3d-front"
+        />
+
+        <img
+          src="/cristocoin-hero.webp"
+          alt=""
+          aria-hidden="true"
+          className="coin-3d-face coin-3d-back"
+        />
+      </div>
     </div>
   </div>
+</div>
 </section>
 
 <div className="mt-10 md:mt-20">

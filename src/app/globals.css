@@ -203,3 +203,140 @@ body {
   animation: cloud-curtain-right 15s ease-in-out infinite;
   will-change: transform, opacity;
 }
+@keyframes coinAxisSpin {
+  0% {
+    transform: rotateY(-34deg) rotateX(5deg) scale(1);
+  }
+  25% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.04);
+  }
+  50% {
+    transform: rotateY(34deg) rotateX(-5deg) scale(1);
+  }
+  75% {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.04);
+  }
+  100% {
+    transform: rotateY(-34deg) rotateX(5deg) scale(1);
+  }
+}
+
+.cristo-coin-spin {
+  display: block;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  filter:
+    drop-shadow(0 0 18px rgba(212, 175, 55, 0.22))
+    drop-shadow(0 0 40px rgba(130, 71, 229, 0.32));
+  animation:
+    coinAxisSpin 4.8s ease-in-out infinite,
+    coinFloat 4.2s ease-in-out infinite;
+  will-change: transform, filter;
+}
+
+
+
+@keyframes coinFloat {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -8px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+.coin-3d-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1600px;
+  transform-style: preserve-3d;
+  animation: coin-float 6s ease-in-out infinite;
+}
+
+.hero-coin-size {
+  width: min(82vw, 420px);
+  height: min(82vw, 420px);
+}
+
+.gate-coin-size {
+  width: 80px;
+  height: 80px;
+}
+
+.coin-3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: coin-spin-3d 12s linear infinite;
+  will-change: transform;
+}
+
+.coin-3d-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  backface-visibility: hidden;
+  box-shadow:
+    0 0 18px rgba(212, 175, 55, 0.25),
+    0 0 70px rgba(130, 71, 229, 0.35);
+}
+
+.coin-3d-front {
+  transform: translateZ(6px);
+}
+
+.coin-3d-back {
+  transform: rotateY(180deg) translateZ(6px);
+  filter: brightness(0.82) saturate(0.95);
+}
+
+.coin-3d-edge {
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  left: 50%;
+  width: 12px;
+  transform: translateX(-50%) rotateY(90deg);
+  border-radius: 9999px;
+  background: linear-gradient(
+  180deg,
+  #f8e7a0 0%,
+  #c89b28 22%,
+  #5f3f0c 50%,
+  #c89b28 78%,
+  #f8e7a0 100%
+);
+  box-shadow:
+  0 0 8px rgba(212, 175, 55, 0.25),
+  inset 0 0 8px rgba(255, 245, 200, 0.18);
+}
+
+@keyframes coin-spin-3d {
+  0% {
+    transform: rotateX(4deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(4deg) rotateY(360deg);
+  }
+}
+
+@keyframes coin-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+}
