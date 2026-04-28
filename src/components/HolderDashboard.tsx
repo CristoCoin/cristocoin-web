@@ -6,6 +6,7 @@ import { createPublicClient, erc20Abi, formatUnits, http } from "viem";
 import { polygon } from "viem/chains";
 import { useAccount, useChainId, useDisconnect, useSwitchChain } from "wagmi";
 const CRISTO_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
+const CRISTO_X_URL = "https://x.com/CristoCoinToken";
 
 const publicClient = createPublicClient({
   chain: polygon,
@@ -252,10 +253,20 @@ export function HolderDashboard() {
             <p className="mt-2 text-2xl font-black text-white">{rank}</p>
 
 {rank === "Visitor" && (
-  <p className="mt-3 text-sm leading-relaxed text-purple-200">
-    No $CRISTO detected yet. Explore the shrine, follow CristoCoin on X and wait
-    for the first community drop.
-  </p>
+  <div className="mt-3 space-y-3">
+    <p className="text-sm leading-relaxed text-purple-200">
+      No $CRISTO detected yet. Explore the shrine, follow CristoCoin on X and
+      wait for the first community drop.
+    </p>
+
+    <a
+      href={CRISTO_X_URL}
+      target="_blank"
+      className="inline-flex rounded-xl border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
+    >
+      Follow First Drop
+    </a>
+  </div>
 )}
 
 {rank === "Cristo Guardian" && (
