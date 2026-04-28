@@ -242,11 +242,17 @@ export function HolderDashboard() {
           </div>
 
           <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4">
-            <p className="text-sm text-purple-300">Your $CRISTO Balance</p>
-            <p className="mt-2 text-2xl font-black text-[#D4AF37]">
-              {balance === null ? "..." : currentBalance.toLocaleString()}
-            </p>
-          </div>
+  <p className="text-sm text-purple-300">Your $CRISTO Balance</p>
+  <p className="mt-2 text-2xl font-black text-[#D4AF37]">
+    {balance === null ? "..." : `${currentBalance.toLocaleString()} $CRISTO`}
+  </p>
+
+  {rank === "Visitor" && (
+    <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+      Awaiting first shrine signal.
+    </p>
+  )}
+</div>
 
           <div className="rounded-xl border border-purple-500/30 bg-purple-950/30 p-4">
             <p className="text-sm text-purple-300">Arcade Rank</p>
