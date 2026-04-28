@@ -179,7 +179,7 @@ export function HolderDashboard() {
         onClick={() => openConnectModal?.()}
         className="mb-3 w-full rounded-xl bg-purple-600 px-6 py-4 text-xl font-black text-white shadow-[0_0_25px_#8247E577] transition hover:bg-purple-500"
       >
-        {connected ? "Wallet Recognized ✅" : "Enter the Shrine"}
+        {connected ? "Shrine Connection Active ✅" : "Enter the Shrine"}
       </button>
      
     {!connected && (
