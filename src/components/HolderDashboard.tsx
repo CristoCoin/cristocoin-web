@@ -130,21 +130,21 @@ export function HolderDashboard() {
 
 <div className="mb-8 grid gap-3 md:grid-cols-3">
   {[
-    {
-      step: "01",
-      title: "Connect Wallet",
-      text: "Enter through your Web3 wallet.",
-    },
-    {
-      step: "02",
-      title: "Read Balance",
-      text: "Check your public $CRISTO balance.",
-    },
-    {
-      step: "03",
-      title: "Reveal Rank",
-      text: "Unlock your arcade identity.",
-    },
+   {
+  step: "01",
+  title: "Connect Wallet",
+  text: "Enter through your Web3 wallet. No seed phrase required.",
+},
+{
+  step: "02",
+  title: "Read Balance",
+  text: "The shrine reads your public $CRISTO balance only.",
+},
+{
+  step: "03",
+  title: "Reveal Rank",
+  text: "Your arcade identity appears from your token signal.",
+},
   ].map((item) => (
     <div
       key={item.step}
