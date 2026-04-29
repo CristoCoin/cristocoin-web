@@ -110,15 +110,15 @@ export function InteractiveCoin() {
         }}
       >
         <div className="interactive-coin-thickness" aria-hidden="true">
-          {Array.from({ length: 46 }).map((_, index) => (
-            <span
-              key={index}
-              className="interactive-coin-slice"
-              style={{
-                transform: `translateZ(${(index - 23) * 1.05}px)`,
-              }}
-            />
-          ))}
+          {Array.from({ length: 70 }).map((_, index) => (
+  <span
+    key={index}
+    className="interactive-coin-slice"
+    style={{
+      transform: `translateZ(${(index - 35) * 0.95}px)`,
+    }}
+  />
+))}
         </div>
 
         <img
