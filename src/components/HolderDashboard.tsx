@@ -101,6 +101,38 @@ export function HolderDashboard() {
     setMessage("Contract copied ✅ Add $CRISTO manually in MetaMask if needed.");
   }
 
+async function addCristoToWallet() {
+  try {
+    const ethereum = (window as any).ethereum;
+
+    if (!ethereum) {
+      setMessage("MetaMask not detected. Open the shrine inside a Web3 wallet browser.");
+      return;
+    }
+
+    const wasAdded = await ethereum.request({
+      method: "wallet_watchAsset",
+      params: {
+        type: "ERC20",
+        options: {
+          address: CRISTO_ADDRESS,
+          symbol: "CRISTO",
+          decimals: 18,
+        },
+      },
+    });
+
+    if (wasAdded) {
+      setMessage("$CRISTO added to wallet ✅");
+    } else {
+      setMessage("Token import cancelled.");
+    }
+  } catch (error) {
+    console.error(error);
+    setMessage("Could not add $CRISTO to wallet.");
+  }
+}
+
   function disconnectWallet() {
   disconnect();
   setBalance(null);
@@ -211,7 +243,13 @@ The shrine reads your public wallet signal only. No transaction is required.
       Refresh Rank
     </button>
 
-   
+   <button
+  type="button"
+  onClick={addCristoToWallet}
+  className="w-full rounded-xl border border-[#D4AF37]/55 bg-[#D4AF37]/10 px-6 py-3 font-bold text-[#D4AF37] transition hover:bg-[#D4AF37]/20 hover:text-yellow-200"
+>
+  Add $CRISTO
+</button>
 
     <button
       type="button"
