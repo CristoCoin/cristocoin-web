@@ -65,7 +65,7 @@ export default function Home() {
     <div className="absolute left-[-15%] bottom-[18%] h-40 w-[70%] rounded-full bg-[#D4AF37]/10 blur-3xl" />
   </div>
 
- <div className="gate-glow relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-6 backdrop-blur md:p-10">
+ <div className="gate-glow premium-fade-up premium-shimmer relative mx-auto max-w-4xl rounded-3xl border border-purple-500/40 bg-black/45 p-6 backdrop-blur md:p-10">
 
 
     <p className="mb-4 inline-block rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-4 py-2 text-xs font-black uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -575,3 +575,4 @@ function Info({ label, value }: { label: string; value: string }) {
     </div>
   );
 }
+
