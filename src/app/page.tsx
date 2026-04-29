@@ -459,7 +459,7 @@ not represent financial guarantees, expected value or investment advice.
   </p>
 </div>
 
-<div className="self-start rounded-3xl border border-[#D4AF37]/50 bg-gradient-to-br from-[#D4AF37]/15 via-black to-purple-950/20 p-6 shadow-[0_0_35px_#D4AF3722]">
+<div className="shrine-panel-gold self-start rounded-3xl p-6">
   <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-black/30 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
     Wallet Safety
   </p>

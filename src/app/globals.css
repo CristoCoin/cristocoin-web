@@ -560,10 +560,10 @@ main {
 
 .rounded-3xl:hover,
 .rounded-2xl:hover {
-  border-color: rgba(212, 175, 55, 0.36);
+  border-color: rgba(212, 175, 55, 0.26);
   box-shadow:
-    0 0 32px rgba(130, 71, 229, 0.18),
-    0 0 18px rgba(212, 175, 55, 0.08);
+    0 0 24px rgba(130, 71, 229, 0.12),
+    0 0 12px rgba(212, 175, 55, 0.06);
 }
 
 /* Golden section divider */
@@ -641,7 +641,7 @@ section {
   z-index: 10;
   height: 1px;
   width: min(860px, calc(100% - 48px));
-  margin: 56px auto;
+  margin: 42px auto;
   background: linear-gradient(
     90deg,
     transparent,
@@ -664,4 +664,24 @@ section {
   border-radius: 999px;
   background: radial-gradient(circle, rgba(212, 175, 55, 0.85), rgba(130, 71, 229, 0.35), transparent 72%);
   filter: blur(5px);
+}
+
+.shrine-panel {
+  background:
+    radial-gradient(circle at top right, rgba(130, 71, 229, 0.18), transparent 34%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.78), rgba(31, 12, 68, 0.32), rgba(0, 0, 0, 0.72));
+  border: 1px solid rgba(168, 85, 247, 0.34);
+  box-shadow:
+    0 0 26px rgba(130, 71, 229, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+.shrine-panel-gold {
+  background:
+    radial-gradient(circle at top right, rgba(212, 175, 55, 0.14), transparent 34%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.78), rgba(31, 12, 68, 0.26), rgba(0, 0, 0, 0.72));
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  box-shadow:
+    0 0 26px rgba(212, 175, 55, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025);
 }
