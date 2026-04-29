@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "CristoCoin $CRISTO | Arcade Shrine on Polygon",
   description:
     "Enter the CristoCoin arcade shrine: a meme-powered Web3 experience on Polygon with wallet status, visitor mode and community roadmap.",
+    icons: {
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/icon.png",
+},
 };
 
 export default function RootLayout({
@@ -21,3 +26,4 @@ export default function RootLayout({
     </html>
   );
 }
+
