@@ -144,7 +144,7 @@ async function addCristoToWallet() {
   const memePower = getMemePower(currentBalance);
 
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-purple-500/50 bg-gradient-to-br from-black via-purple-950/40 to-black p-6 shadow-[0_0_45px_#8247E533]">
+    <section className="premium-card-glow relative overflow-hidden rounded-3xl border border-purple-500/50 bg-gradient-to-br from-black via-purple-950/40 to-black p-6 shadow-[0_0_45px_#8247E533]">
       <div className="mb-6">
   <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
     Shrine Access
