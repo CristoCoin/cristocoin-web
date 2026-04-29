@@ -60,11 +60,11 @@ export function InteractiveCoin() {
     lastPointerX.current = event.clientX;
 
     // Solo eje Y
-    const nextAngle = angleRef.current + deltaX * 0.65;
+    const nextAngle = angleRef.current + deltaX * 0.9;
     angleRef.current = nextAngle;
 
     // Guarda impulso para que al soltar salga disparada
-    velocityRef.current = deltaX * 0.75;
+    velocityRef.current = deltaX * 1.15;
 
     setAngleY(nextAngle);
   }
@@ -73,7 +73,7 @@ export function InteractiveCoin() {
     setIsDragging(false);
 
     // Pequeño boost al soltar, sin volverse loco
-    const maxBoost = 8.5;
+   const maxBoost = 16;
     const minBoost = 0.65;
 
     if (Math.abs(velocityRef.current) < minBoost) {
@@ -109,6 +109,9 @@ export function InteractiveCoin() {
           transform: `rotateY(${angleY}deg)`,
         }}
       >
+
+<div className="interactive-coin-rim" aria-hidden="true" />
+
         <div className="interactive-coin-thickness" aria-hidden="true">
           {Array.from({ length: 70 }).map((_, index) => (
   <span

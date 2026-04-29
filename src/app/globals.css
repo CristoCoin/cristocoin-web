@@ -773,11 +773,11 @@ section {
 }
 
 .interactive-coin-front {
-  transform: translateZ(34px);
+  transform: translateZ(36px);
 }
 
 .interactive-coin-back {
-  transform: rotateY(180deg) translateZ(34px);
+  transform: rotateY(180deg) translateZ(36px);
 }
 .interactive-coin-thickness {
   position: absolute;
@@ -834,15 +834,42 @@ section {
   }
 
  .interactive-coin-front {
-  transform: translateZ(28px);
+  transform: translateZ(22px);
 }
 
 .interactive-coin-back {
-  transform: rotateY(180deg) translateZ(28px);
+  transform: rotateY(180deg) translateZ(22px);
 }
 
   .interactive-coin-zone::after {
     width: 300px;
     height: 300px;
   }
+}
+
+.interactive-coin-rim {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 64px;
+  height: 100%;
+  transform: translate(-50%, -50%) rotateY(90deg);
+  transform-style: preserve-3d;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(28, 14, 4, 1) 0%,
+      rgba(104, 61, 13, 1) 12%,
+      rgba(255, 224, 112, 1) 28%,
+      rgba(137, 82, 16, 1) 48%,
+      rgba(255, 235, 151, 1) 68%,
+      rgba(74, 38, 8, 1) 86%,
+      rgba(18, 10, 3, 1) 100%
+    );
+  box-shadow:
+    inset 10px 0 18px rgba(255, 235, 150, 0.2),
+    inset -12px 0 22px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(212, 175, 55, 0.22);
+  opacity: 0.95;
 }
