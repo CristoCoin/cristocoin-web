@@ -399,7 +399,7 @@ export default function Home() {
           </section>
 
          <section className="mt-16 grid gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+            <div className="self-start rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
   <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
     Project Overview
   </p>
