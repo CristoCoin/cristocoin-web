@@ -52,7 +52,7 @@ export default function Home() {
 
 </div>
 
-<section className="relative px-6 pt-10 pb-8 md:min-h-[62vh] md:px-16 md:pt-16 md:pb-12">
+<section className="relative mb-8 px-6 pt-10 pb-8 md:mb-12 md:min-h-[58vh] md:px-16 md:pt-16 md:pb-8">
   <div className="pointer-events-none absolute inset-0">
     <div className="cloud-curtain-left absolute -left-40 top-0 h-56 w-[70%] rounded-full bg-white/12 blur-[80px]" />
 <div className="cloud-curtain-right absolute -right-40 bottom-0 h-56 w-[70%] rounded-full bg-purple-200/12 blur-[90px]" />
@@ -100,7 +100,7 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="relative z-10 overflow-hidden px-6 pt-10 pb-10 md:px-16 md:pt-16 md:pb-16">
+      <section className="relative z-10 overflow-hidden px-6 pt-6 pb-10 md:px-16 md:pt-8 md:pb-16">
   <div className="pointer-events-none absolute inset-x-0 -top-40 bottom-0 bg-[radial-gradient(circle_at_70%_10%,#8247E540,transparent_35%),radial-gradient(circle_at_20%_80%,#D4AF3718,transparent_38%)] opacity-70" />
 
  <div className="relative z-10 mx-auto max-w-6xl">
