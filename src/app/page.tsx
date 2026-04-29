@@ -210,40 +210,63 @@ export default function Home() {
       </div>
     </div>
   </div>
-<div className="relative z-10 flex items-center justify-center py-4 md:py-0">
-  <div className="relative">
-  <div className="coin-portal-aura" />
-  <div className="coin-portal-ring" />
-  <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
-  <div className="absolute -inset-2 rounded-full border border-purple-400/15" />
+<div className="relative z-10 flex items-center justify-center py-6 md:py-0">
+  <div className="relative flex h-[430px] w-full max-w-[520px] items-center justify-center">
+    
+    {/* resplandor general */}
+    <div className="absolute inset-0 rounded-[999px] bg-[radial-gradient(circle,#7c3aed55_0%,#4c1d9555_28%,transparent_68%)] blur-2xl" />
+    
+    {/* auras de fondo */}
+    <div className="absolute h-[380px] w-[380px] rounded-full border border-purple-300/15" />
+    <div className="absolute h-[320px] w-[320px] rounded-full border border-purple-300/10" />
+    <div className="absolute h-[260px] w-[260px] rounded-full bg-purple-500/10 blur-2xl" />
 
-   <div className="coin-3d-scene hero-coin-size">
-  <div className="coin-3d">
-    <div className="coin-thickness" aria-hidden="true">
-      {Array.from({ length: 15 }).map((_, i) => (
-  <span
-    key={i}
-    className="coin-slice"
-    style={{ transform: `translateZ(${(i - 7) * 0.65}px)` }}
-  />
-))}
+    {/* halo exterior */}
+    <div className="absolute -inset-8 rounded-full bg-purple-600/20 blur-3xl" />
+
+    {/* pedestal de luz */}
+    <div className="absolute bottom-12 h-8 w-[220px] rounded-full bg-[#D4AF37]/25 blur-2xl" />
+    <div className="absolute bottom-14 h-[2px] w-[240px] bg-gradient-to-r from-transparent via-[#D4AF37]/70 to-transparent" />
+    <div className="absolute bottom-16 h-[90px] w-[280px] rounded-full bg-purple-500/20 blur-3xl" />
+
+    {/* contenedor visual del portal */}
+    <div className="relative flex h-[340px] w-[340px] items-center justify-center rounded-full border border-purple-300/10 bg-black/10 shadow-[0_0_80px_rgba(124,58,237,0.28)] backdrop-blur-sm">
+      
+      {/* aro mágico */}
+      <div className="absolute inset-5 rounded-full border border-purple-300/12" />
+      <div className="absolute inset-9 rounded-full border border-[#D4AF37]/10" />
+
+      {/* moneda */}
+      <div className="scale-[1.35] md:scale-[1.45]">
+        <div className="coin-3d-scene hero-coin-size">
+          <div className="coin-3d">
+            <div className="coin-thickness" aria-hidden="true">
+              {Array.from({ length: 15 }).map((_, i) => (
+                <span
+                  key={i}
+                  className="coin-slice"
+                  style={{ transform: `translateZ(${(i - 7) * 0.65}px)` }}
+                />
+              ))}
+            </div>
+
+            <img
+              src="/cristocoin-hero.webp"
+              alt="CristoCoin official coin"
+              className="coin-3d-face coin-3d-front"
+            />
+
+            <img
+              src="/cristocoin-hero.webp"
+              alt=""
+              aria-hidden="true"
+              className="coin-3d-face coin-3d-back"
+            />
+          </div>
+        </div>
+      </div>
     </div>
-
-    <img
-      src="/cristocoin-hero.webp"
-      alt="CristoCoin official coin"
-      className="coin-3d-face coin-3d-front"
-    />
-
-    <img
-      src="/cristocoin-hero.webp"
-      alt=""
-      aria-hidden="true"
-      className="coin-3d-face coin-3d-back"
-    />
   </div>
-</div>
-</div>
 </div>
 </section>
 </div>
