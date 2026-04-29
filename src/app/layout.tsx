@@ -8,8 +8,9 @@ export const metadata: Metadata = {
     "Enter the CristoCoin arcade shrine: a meme-powered Web3 experience on Polygon with wallet status, visitor mode and community roadmap.",
     
   icons: {
-  icon: "/favicon.ico",
-  shortcut: "/favicon.ico",
+  icon: "/icon.png",
+  shortcut: "/icon.png",
+  apple: "/icon.png",
 },
 };
 
