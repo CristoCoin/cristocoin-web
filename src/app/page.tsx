@@ -8,6 +8,8 @@ import { roadmapModules } from "@/lib/roadmapModules";
 
 import { shrineSteps } from "@/lib/shrineSteps";
 
+import { InteractiveCoin } from "@/components/InteractiveCoin";
+
 import { CopyContractButton } from "@/components/CopyContractButton";
 
 const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
@@ -238,32 +240,7 @@ export default function Home() {
 
       {/* moneda */}
       <div className="scale-[1.35] md:scale-[1.45]">
-        <div className="coin-3d-scene hero-coin-size">
-          <div className="coin-3d">
-            <div className="coin-thickness" aria-hidden="true">
-              {Array.from({ length: 15 }).map((_, i) => (
-                <span
-                  key={i}
-                  className="coin-slice"
-                  style={{ transform: `translateZ(${(i - 7) * 0.65}px)` }}
-                />
-              ))}
-            </div>
-
-            <img
-              src="/cristocoin-hero.webp"
-              alt="CristoCoin official coin"
-              className="coin-3d-face coin-3d-front"
-            />
-
-            <img
-              src="/cristocoin-hero.webp"
-              alt=""
-              aria-hidden="true"
-              className="coin-3d-face coin-3d-back"
-            />
-          </div>
-        </div>
+       <InteractiveCoin />
       </div>
     </div>
   </div>

@@ -699,3 +699,141 @@ section {
     0 0 26px rgba(212, 175, 55, 0.12),
     inset 0 0 0 1px rgba(255, 255, 255, 0.025);
 }
+
+.interactive-coin-zone {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  min-height: 390px;
+  width: min(100%, 520px);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  align-items: center;
+  justify-content: center;
+  perspective: 1100px;
+}
+
+.interactive-coin-zone:active {
+  cursor: grabbing;
+}
+
+.interactive-coin-zone::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-radius: 999px;
+  background:
+    radial-gradient(circle, rgba(212, 175, 55, 0.20), transparent 30%),
+    radial-gradient(circle, rgba(130, 71, 229, 0.36), transparent 68%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.interactive-coin-zone::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 999px;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow:
+    0 0 55px rgba(130, 71, 229, 0.28),
+    inset 0 0 42px rgba(212, 175, 55, 0.06);
+  pointer-events: none;
+}
+
+.interactive-coin {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: coinIdleSpin 9s linear infinite;
+  filter:
+    drop-shadow(0 0 28px rgba(212, 175, 55, 0.28))
+    drop-shadow(0 0 45px rgba(130, 71, 229, 0.32));
+}
+
+.interactive-coin.is-dragging {
+  animation: none;
+}
+
+.interactive-coin-face,
+.interactive-coin-slice {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 999px;
+  object-fit: cover;
+  backface-visibility: hidden;
+}
+
+.interactive-coin-front {
+  transform: translateZ(8px);
+}
+
+.interactive-coin-back {
+  transform: rotateY(180deg) translateZ(8px);
+}
+
+.interactive-coin-thickness {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+
+.interactive-coin-slice {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 230, 140, 0.95), rgba(127, 81, 20, 0.95) 62%, rgba(35, 20, 8, 1) 100%);
+  border: 1px solid rgba(255, 220, 120, 0.22);
+}
+
+.interactive-coin-hint {
+  position: absolute;
+  bottom: 18px;
+  z-index: 4;
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 6px 12px;
+  color: rgba(255, 235, 170, 0.85);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.interactive-coin-zone:hover .interactive-coin-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes coinIdleSpin {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .interactive-coin-zone {
+    min-height: 320px;
+  }
+
+  .interactive-coin {
+    width: 230px;
+    height: 230px;
+  }
+
+  .interactive-coin-zone::after {
+    width: 290px;
+    height: 290px;
+  }
+}
