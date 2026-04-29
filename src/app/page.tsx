@@ -417,9 +417,9 @@ export default function Home() {
 </p>
   </p>
 
-  <div className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-[#D4AF37]/10 p-4 text-xs leading-relaxed text-zinc-300">
+  <div className="mt-6 rounded-2xl border border-[#D4AF37]/25 bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-300">
 
-<div className="mt-5 grid gap-3 text-sm md:grid-cols-3">
+<div className="mt-5 mb-5 grid gap-3 text-sm md:grid-cols-3">
   <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
     <p className="text-purple-300">Network</p>
     <p className="mt-1 font-black text-white">Polygon</p>
