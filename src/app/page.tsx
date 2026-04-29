@@ -418,6 +418,24 @@ export default function Home() {
   </p>
 
   <div className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-[#D4AF37]/10 p-4 text-xs leading-relaxed text-zinc-300">
+
+<div className="mt-5 grid gap-3 text-sm md:grid-cols-3">
+  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+    <p className="text-purple-300">Network</p>
+    <p className="mt-1 font-black text-white">Polygon</p>
+  </div>
+
+  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+    <p className="text-purple-300">Access</p>
+    <p className="mt-1 font-black text-white">Read-only shrine</p>
+  </div>
+
+  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+    <p className="text-purple-300">Mode</p>
+    <p className="mt-1 font-black text-white">Community arcade</p>
+  </div>
+</div>
+
     <span className="font-black text-[#D4AF37]">Important:</span>{" "}
     CristoCoin does not promise profit, value, utility or future development.
     Nothing on this website is financial advice.
@@ -502,9 +520,9 @@ token, wallet prompt or Web3 application.
     </p>
 
     <p className="rounded-2xl border border-[#D4AF37]/25 bg-black/35 p-4 text-xs text-zinc-300">
-      Always verify the official contract on PolygonScan before interacting
-      with any token or Web3 application.
-    </p>
+  The shrine scan is designed for public balance reading only. Reject any prompt
+  that asks for seed phrases, private keys or unexpected transactions.
+</p>
   </div>
 </div>
 
