@@ -873,3 +873,76 @@ section {
     0 0 22px rgba(212, 175, 55, 0.22);
   opacity: 0.95;
 }
+/* Strong visible coin thickness */
+
+.interactive-coin {
+  position: relative;
+  overflow: visible;
+}
+
+/* Canto derecho visible */
+.interactive-coin::before {
+  content: "";
+  position: absolute;
+  top: 4%;
+  right: -32px;
+  z-index: 1;
+  width: 72px;
+  height: 92%;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(30, 16, 4, 1) 0%,
+      rgba(96, 54, 10, 1) 12%,
+      rgba(255, 226, 118, 1) 32%,
+      rgba(138, 82, 18, 1) 52%,
+      rgba(255, 238, 160, 1) 72%,
+      rgba(62, 32, 7, 1) 100%
+    );
+  box-shadow:
+    inset 10px 0 18px rgba(255, 238, 160, 0.22),
+    inset -16px 0 24px rgba(0, 0, 0, 0.62),
+    0 0 18px rgba(212, 175, 55, 0.22);
+  transform: rotateY(58deg);
+  transform-origin: left center;
+}
+
+/* Sombra/canto izquierdo para más volumen */
+.interactive-coin::after {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: -13px;
+  z-index: 0;
+  width: 34px;
+  height: 88%;
+  border-radius: 999px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10, 6, 2, 1),
+      rgba(88, 48, 9, 0.95),
+      rgba(230, 185, 70, 0.55)
+    );
+  filter: blur(0.2px);
+  opacity: 0.85;
+  transform: rotateY(-54deg);
+  transform-origin: right center;
+}
+
+.interactive-coin-face {
+  z-index: 3;
+}
+
+.interactive-coin-thickness {
+  z-index: 2;
+}
+
+.interactive-coin-front {
+  transform: translateZ(42px);
+}
+
+.interactive-coin-back {
+  transform: rotateY(180deg) translateZ(42px);
+}
