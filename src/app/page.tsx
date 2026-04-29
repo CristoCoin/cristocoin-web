@@ -407,9 +407,12 @@ export default function Home() {
   </h3>
 
   <p className="text-sm leading-relaxed text-zinc-300 md:text-base">
-    CristoCoin is a community-driven experimental memecoin on Polygon, created
-    as a cultural, meme-powered and arcade-inspired Web3 project. It is built for
-    entertainment, community identity and playful on-chain culture.
+    <p className="text-sm leading-relaxed text-zinc-300 md:text-base">
+  CristoCoin is a community-driven experimental memecoin on Polygon, shaped as
+  a cultural, meme-powered and arcade-inspired Web3 project. The shrine is built
+  around entertainment, community identity, transparent access and playful
+  on-chain culture.
+</p>
   </p>
 
   <div className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-[#D4AF37]/10 p-4 text-xs leading-relaxed text-zinc-300">
