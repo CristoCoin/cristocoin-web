@@ -504,3 +504,164 @@ body {
   animation: premium-shimmer 6s ease-in-out infinite;
   pointer-events: none;
 }
+
+/* CristoCoin premium shrine atmosphere */
+
+body {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(130, 71, 229, 0.34), transparent 30%),
+    radial-gradient(circle at 82% 28%, rgba(212, 175, 55, 0.16), transparent 24%),
+    radial-gradient(circle at 50% 72%, rgba(130, 71, 229, 0.22), transparent 34%),
+    linear-gradient(180deg, #05070d 0%, #0b0518 38%, #13082a 68%, #05070d 100%);
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 35%, rgba(255, 255, 255, 0.08), transparent 18%),
+    radial-gradient(circle at 76% 42%, rgba(170, 120, 255, 0.10), transparent 22%),
+    radial-gradient(circle at 48% 88%, rgba(212, 175, 55, 0.07), transparent 20%);
+  filter: blur(34px);
+  opacity: 0.95;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.06;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 84px 84px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Premium glow for main cards */
+.shrine-card,
+.rounded-3xl,
+.rounded-2xl {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.rounded-3xl:hover,
+.rounded-2xl:hover {
+  border-color: rgba(212, 175, 55, 0.36);
+  box-shadow:
+    0 0 32px rgba(130, 71, 229, 0.18),
+    0 0 18px rgba(212, 175, 55, 0.08);
+}
+
+/* Golden section divider */
+.shrine-divider {
+  height: 1px;
+  width: min(860px, calc(100% - 48px));
+  margin: 56px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(130, 71, 229, 0.55),
+    rgba(212, 175, 55, 0.55),
+    rgba(130, 71, 229, 0.55),
+    transparent
+  );
+  box-shadow: 0 0 22px rgba(130, 71, 229, 0.35);
+}
+
+/* Coin portal aura */
+.coin-portal-aura {
+  position: absolute;
+  inset: -42px;
+  border-radius: 9999px;
+  background:
+    radial-gradient(circle, rgba(212, 175, 55, 0.22), transparent 42%),
+    radial-gradient(circle, rgba(130, 71, 229, 0.30), transparent 66%);
+  filter: blur(18px);
+  pointer-events: none;
+}
+
+.coin-portal-ring {
+  position: absolute;
+  inset: -28px;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow:
+    0 0 40px rgba(130, 71, 229, 0.22),
+    inset 0 0 34px rgba(212, 175, 55, 0.08);
+  pointer-events: none;
+}
+
+/* Premium buttons */
+a,
+button {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+a:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Subtle cinematic entrance */
+@keyframes shrineFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: shrineFadeUp 0.7s ease both;
+}
+
+.shrine-divider {
+  position: relative;
+  z-index: 10;
+  height: 1px;
+  width: min(860px, calc(100% - 48px));
+  margin: 56px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(130, 71, 229, 0.55),
+    rgba(212, 175, 55, 0.55),
+    rgba(130, 71, 229, 0.55),
+    transparent
+  );
+  box-shadow: 0 0 22px rgba(130, 71, 229, 0.35);
+}
+
+.shrine-divider::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  width: 120px;
+  height: 7px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.85), rgba(130, 71, 229, 0.35), transparent 72%);
+  filter: blur(5px);
+}

@@ -212,7 +212,9 @@ export default function Home() {
   </div>
 <div className="relative z-10 flex items-center justify-center py-4 md:py-0">
   <div className="relative">
-    <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
+  <div className="coin-portal-aura" />
+  <div className="coin-portal-ring" />
+  <div className="absolute -inset-10 rounded-full bg-purple-600/30 blur-3xl" />
   <div className="absolute -inset-2 rounded-full border border-purple-400/15" />
 
    <div className="coin-3d-scene hero-coin-size">
@@ -246,11 +248,16 @@ export default function Home() {
 </section>
 </div>
 </section>
+
+<div className="shrine-divider" />
+
+<div className="shrine-divider" />
+
 <div className="relative z-10 mx-auto mt-10 max-w-5xl px-6 md:mt-20 md:px-0">
   <HolderDashboard />
 </div>
 
-
+<div className="shrine-divider" />
 
 <section className="relative z-10 mx-auto mt-14 max-w-5xl rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/30 to-black p-6 shadow-[0_0_35px_#8247E522]">
   <div className="mb-8">
