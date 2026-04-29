@@ -437,8 +437,9 @@ export default function Home() {
   </div>
 
   <p className="mt-5 rounded-2xl border border-purple-500/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
-    Always verify the contract address before interacting with any token or Web3
-    application.
+   Always verify the contract address before interacting with any token or Web3
+application. After connecting your wallet, use the Shrine Access panel to add
+$CRISTO to MetaMask.
   </p>
 </div>
 
