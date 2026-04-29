@@ -64,7 +64,7 @@ export function InteractiveCoin() {
     angleRef.current = nextAngle;
 
     // Guarda impulso para que al soltar salga disparada
-    velocityRef.current = deltaX * 0.42;
+    velocityRef.current = deltaX * 0.75;
 
     setAngleY(nextAngle);
   }
@@ -73,7 +73,7 @@ export function InteractiveCoin() {
     setIsDragging(false);
 
     // Pequeño boost al soltar, sin volverse loco
-    const maxBoost = 4.2;
+    const maxBoost = 8.5;
     const minBoost = 0.65;
 
     if (Math.abs(velocityRef.current) < minBoost) {
