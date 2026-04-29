@@ -507,12 +507,13 @@ token, wallet prompt or Web3 application.
         </div>
       </section>
 
-      <footer className="border-t border-purple-500/30 px-6 py-8 text-sm text-purple-200">
-  <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 rounded-2xl border border-purple-500/30 bg-black/30 px-5 py-5 text-center md:flex-row md:text-left">
+     <footer className="relative z-50 mt-16 border-t border-purple-500/30 px-6 pt-8 pb-10 text-sm text-purple-200">
+  <div className="mx-auto flex w-full max-w-5xl flex-col items-center justify-between gap-4 rounded-2xl border border-purple-500/40 bg-black/70 px-5 py-5 text-center shadow-[0_0_30px_#8247E533] backdrop-blur md:flex-row md:text-left">
     <div>
       <p className="font-black text-white">
         CristoCoin <span className="text-[#D4AF37]">$CRISTO</span>
       </p>
+
       <p className="mt-1 text-xs text-purple-200/80">
         Built on Polygon · Arcade shrine experience · Community culture · 2026
       </p>
@@ -523,7 +524,7 @@ token, wallet prompt or Web3 application.
         href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-full border border-[#D4AF37]/40 px-3 py-2 text-[#D4AF37] transition hover:bg-[#D4AF37]/10"
+        className="rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-2 text-[#D4AF37] transition hover:bg-[#D4AF37]/20"
       >
         Verify
       </a>
@@ -532,7 +533,7 @@ token, wallet prompt or Web3 application.
         href="https://x.com/CristoCoinToken"
         target="_blank"
         rel="noopener noreferrer"
-        className="rounded-full border border-purple-400/40 px-3 py-2 text-purple-100 transition hover:bg-purple-950/40"
+        className="rounded-full border border-purple-400/50 bg-purple-950/40 px-3 py-2 text-purple-100 transition hover:bg-purple-950/70"
       >
         X
       </a>
