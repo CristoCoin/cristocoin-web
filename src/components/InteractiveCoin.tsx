@@ -3,45 +3,87 @@
 import { useEffect, useRef, useState } from "react";
 
 export function InteractiveCoin() {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [angleY, setAngleY] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
 
-  const lastPointer = useRef({ x: 0, y: 0 });
-  const rotationRef = useRef({ x: 0, y: 0 });
+  const angleRef = useRef(0);
+  const velocityRef = useRef(0.45);
+  const isDraggingRef = useRef(false);
+  const lastPointerX = useRef(0);
+  const frameRef = useRef<number | null>(null);
 
   useEffect(() => {
-    rotationRef.current = rotation;
-  }, [rotation]);
+    angleRef.current = angleY;
+  }, [angleY]);
+
+  useEffect(() => {
+    isDraggingRef.current = isDragging;
+  }, [isDragging]);
+
+  useEffect(() => {
+    const baseSpeed = 0.45;
+
+    function animate() {
+      if (!isDraggingRef.current) {
+        angleRef.current += velocityRef.current;
+
+        // Vuelve poco a poco a la velocidad normal después del impulso
+        velocityRef.current += (baseSpeed - velocityRef.current) * 0.018;
+
+        setAngleY(angleRef.current);
+      }
+
+      frameRef.current = requestAnimationFrame(animate);
+    }
+
+    frameRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (frameRef.current) {
+        cancelAnimationFrame(frameRef.current);
+      }
+    };
+  }, []);
 
   function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
     setIsDragging(true);
-    lastPointer.current = {
-      x: event.clientX,
-      y: event.clientY,
-    };
+    lastPointerX.current = event.clientX;
+    velocityRef.current = 0;
 
     event.currentTarget.setPointerCapture(event.pointerId);
   }
 
   function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
-    if (!isDragging) return;
+    if (!isDraggingRef.current) return;
 
-    const deltaX = event.clientX - lastPointer.current.x;
-    const deltaY = event.clientY - lastPointer.current.y;
+    const deltaX = event.clientX - lastPointerX.current;
+    lastPointerX.current = event.clientX;
 
-    lastPointer.current = {
-      x: event.clientX,
-      y: event.clientY,
-    };
+    // Solo eje Y
+    const nextAngle = angleRef.current + deltaX * 0.65;
+    angleRef.current = nextAngle;
 
-    setRotation((current) => ({
-      x: Math.max(-35, Math.min(35, current.x - deltaY * 0.35)),
-      y: current.y + deltaX * 0.55,
-    }));
+    // Guarda impulso para que al soltar salga disparada
+    velocityRef.current = deltaX * 0.42;
+
+    setAngleY(nextAngle);
   }
 
   function handlePointerUp(event: React.PointerEvent<HTMLDivElement>) {
     setIsDragging(false);
+
+    // Pequeño boost al soltar, sin volverse loco
+    const maxBoost = 4.2;
+    const minBoost = 0.65;
+
+    if (Math.abs(velocityRef.current) < minBoost) {
+      velocityRef.current = velocityRef.current >= 0 ? minBoost : -minBoost;
+    }
+
+    velocityRef.current = Math.max(
+      -maxBoost,
+      Math.min(maxBoost, velocityRef.current)
+    );
 
     try {
       event.currentTarget.releasePointerCapture(event.pointerId);
@@ -64,16 +106,16 @@ export function InteractiveCoin() {
       <div
         className={`interactive-coin ${isDragging ? "is-dragging" : ""}`}
         style={{
-          transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`,
+          transform: `rotateY(${angleY}deg)`,
         }}
       >
         <div className="interactive-coin-thickness" aria-hidden="true">
-          {Array.from({ length: 18 }).map((_, index) => (
+          {Array.from({ length: 46 }).map((_, index) => (
             <span
               key={index}
               className="interactive-coin-slice"
               style={{
-                transform: `translateZ(${(index - 9) * 0.8}px)`,
+                transform: `translateZ(${(index - 23) * 1.05}px)`,
               }}
             />
           ))}
