@@ -249,9 +249,7 @@ export default function Home() {
 </div>
 </section>
 
-<div className="shrine-divider" />
 
-<div className="shrine-divider" />
 
 <div className="relative z-10 mx-auto mt-10 max-w-5xl px-6 md:mt-20 md:px-0">
   <HolderDashboard />
