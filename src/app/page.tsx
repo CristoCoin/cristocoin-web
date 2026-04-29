@@ -428,7 +428,7 @@ export default function Home() {
   </p>
 
   <h3 className="mb-4 text-2xl font-black text-white">
-    Token Info
+    Verified Token Info
   </h3>
 
   <div className="space-y-3 text-sm">
@@ -442,7 +442,7 @@ export default function Home() {
   <p className="mt-5 rounded-2xl border border-purple-500/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
    Always verify the contract address before interacting with any token or Web3
 application. After connecting your wallet, use the Shrine Access panel to add
-$CRISTO to MetaMask.
+$CRISTO to MetaMask through a wallet prompt.
   </p>
 </div>
 
@@ -452,7 +452,7 @@ $CRISTO to MetaMask.
   </p>
 
   <h3 className="mb-4 text-2xl font-black text-white">
-    Tokenomics
+    Supply Layout
   </h3>
 
   <div className="space-y-4">
@@ -474,8 +474,8 @@ $CRISTO to MetaMask.
   </div>
 
   <p className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
-    Tokenomics are shown for transparency and presentation purposes. They do not
-    represent financial guarantees, expected value or investment advice.
+    Supply layout is shown for transparency and presentation purposes. It does not
+represent financial guarantees, expected value or investment advice.
   </p>
 </div>
 
@@ -495,8 +495,8 @@ $CRISTO to MetaMask.
     </p>
 
     <p>
-      The dashboard only reads your public wallet balance to reveal your arcade
-      rank. No transaction is required for the shrine scan.
+    Always verify the official contract on PolygonScan before interacting with any
+token, wallet prompt or Web3 application.
     </p>
 
     <p className="rounded-2xl border border-[#D4AF37]/25 bg-black/35 p-4 text-xs text-zinc-300">
