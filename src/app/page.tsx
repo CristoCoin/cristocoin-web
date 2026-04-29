@@ -536,20 +536,20 @@ token, wallet prompt or Web3 application.
           </h3>
 
           <div className="grid gap-4 text-sm leading-relaxed text-zinc-300 md:grid-cols-3">
-            <p>
-              CristoCoin is a memecoin created for entertainment, culture and
-              community purposes.
-            </p>
+           <p>
+  CristoCoin is a memecoin created for entertainment, culture and community
+  identity.
+</p>
 
-            <p>
-              It is not an investment product. There are no promises of profit,
-              value, utility or future development.
-            </p>
+<p>
+  It is not an investment product. There are no promises of profit, value,
+  utility, rewards or future development.
+</p>
 
-            <p>
-              Nothing on this website is financial advice. Always do your own
-              research before interacting with any Web3 application.
-            </p>
+<p>
+  Nothing on this website is financial advice. Always verify links, wallet
+  prompts and contract addresses before interacting with any Web3 application.
+</p>
           </div>
         </div>
       </section>
@@ -561,7 +561,7 @@ token, wallet prompt or Web3 application.
         CristoCoin <span className="text-[#D4AF37]">$CRISTO</span>
       </p>
       <p className="mt-1 text-xs text-purple-200/80">
-        Built on Polygon · Community arcade memecoin · 2026
+        Built on Polygon · Arcade shrine experience · Community culture · 2026
       </p>
     </div>
 
