@@ -16,7 +16,7 @@ const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
 
 export default function Home() {
   return (
-   <main className="relative min-h-screen bg-[#05070D] text-white">
+   <main className="relative min-h-screen overflow-x-hidden bg-[#05070D] text-white">
 
 <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
   <div className="ambient-cloud ambient-cloud-a absolute left-[-12%] top-[18%] h-56 w-[55%] rounded-full bg-white/8 blur-3xl" />
@@ -103,7 +103,7 @@ export default function Home() {
       <section className="relative z-10 px-6 pt-6 pb-10 md:px-16 md:pt-8 md:pb-16">
   
 
- <div className="relative z-10 mx-auto max-w-6xl">
+ <div className="relative z-10 mx-auto w-full max-w-6xl">
 
           
 
