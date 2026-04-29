@@ -436,10 +436,11 @@ export default function Home() {
   </div>
 </div>
 
-    <span className="font-black text-[#D4AF37]">Important:</span>{" "}
-    CristoCoin does not promise profit, value, utility or future development.
-    Nothing on this website is financial advice.
-  </div>
+    <div className="mt-4 rounded-2xl border border-[#D4AF37]/25 bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-300">
+  <span className="font-black text-[#D4AF37]">Important:</span>{" "}
+  CristoCoin does not promise profit, value, utility or future development.
+  Nothing on this website is financial advice.
+</div>
 </div>
 
             <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
