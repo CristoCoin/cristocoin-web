@@ -25,7 +25,7 @@ export default function Home() {
 </div>
 
     <div className="pointer-events-none fixed inset-0 z-0">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),-glinear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),linear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
 
   <div className="absolute right-10 top-1/3 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
@@ -52,7 +52,7 @@ export default function Home() {
 
 </div>
 
-<section className="relative mb-8 px-6 pt-10 pb-8 md:mb-12 md:min-h-[58vh] md:px-16 md:pt-16 md:pb-8">
+<section className="relative flex min-h-[92vh] items-center px-6 py-10 md:min-h-screen md:px-16 md:py-16">
   <div className="pointer-events-none absolute inset-0">
     <div className="cloud-curtain-left absolute -left-40 top-0 h-56 w-[70%] rounded-full bg-white/12 blur-[80px]" />
 <div className="cloud-curtain-right absolute -right-40 bottom-0 h-56 w-[70%] rounded-full bg-purple-200/12 blur-[90px]" />
