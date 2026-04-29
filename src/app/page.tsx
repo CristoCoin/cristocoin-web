@@ -100,7 +100,7 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="relative z-10 overflow-hidden px-6 pt-2 pb-10 md:px-16 md:pt-4 md:pb-16">
+      <section className="relative z-10 overflow-hidden px-6 pt-10 pb-10 md:px-16 md:pt-16 md:pb-16">
   <div className="pointer-events-none absolute inset-x-0 -top-40 bottom-0 bg-[radial-gradient(circle_at_70%_10%,#8247E540,transparent_35%),radial-gradient(circle_at_20%_80%,#D4AF3718,transparent_38%)] opacity-70" />
 
  <div className="relative z-10 mx-auto max-w-6xl">
