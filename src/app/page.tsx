@@ -1,5 +1,7 @@
 import { HolderDashboard } from "@/components/HolderDashboard";
 
+import { InfoRow } from "@/components/InfoRow";
+
 import { CopyContractButton } from "@/components/CopyContractButton";
 
 const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
@@ -451,11 +453,11 @@ export default function Home() {
   </h3>
 
   <div className="space-y-3 text-sm">
-    <Info label="Token Name" value="CristoCoin" />
-    <Info label="Symbol" value="$CRISTO" />
-    <Info label="Network" value="Polygon" />
-    <Info label="Total Supply" value="1,000,000,000 $CRISTO" />
-    <Info label="Contract" value={CONTRACT_ADDRESS} />
+    <InfoRow label="Token Name" value="CristoCoin" />
+    <InfoRow label="Symbol" value="$CRISTO" />
+    <InfoRow label="Network" value="Polygon" />
+    <InfoRow label="Total Supply" value="1,000,000,000 $CRISTO" />
+    <InfoRow label="Contract" value={CONTRACT_ADDRESS} />
   </div>
 
   <p className="mt-5 rounded-2xl border border-purple-500/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
@@ -589,14 +591,4 @@ token, wallet prompt or Web3 application.
   );
 }
 
-function Info({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="grid gap-1 border-b border-purple-500/20 py-2 sm:grid-cols-[140px_1fr] sm:items-start">
-      <span className="text-zinc-400">{label}</span>
-      <span className="break-all text-left font-bold text-white sm:text-right">
-        {value}
-      </span>
-    </div>
-  );
-}
 
