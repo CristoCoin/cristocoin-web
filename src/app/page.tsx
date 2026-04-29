@@ -421,11 +421,11 @@ $CRISTO to MetaMask through a wallet prompt.
 
        <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
   <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
-    Supply Layout
+    Tokenomics 
   </p>
 
   <h3 className="mb-4 text-2xl font-black text-white">
-    Supply Layout
+    Proposed Supply Distribution
   </h3>
 
   <div className="space-y-4">
@@ -447,8 +447,8 @@ $CRISTO to MetaMask through a wallet prompt.
   </div>
 
   <p className="mt-5 rounded-2xl border border-[#D4AF37]/25 bg-black/30 p-4 text-xs leading-relaxed text-zinc-400">
-    Supply layout is shown for transparency and presentation purposes. It does not
-represent financial guarantees, expected value or investment advice.
+    This supply distribution is shown for transparency and planning purposes. It does
+not represent financial guarantees, expected value or investment advice.
   </p>
 </div>
 
