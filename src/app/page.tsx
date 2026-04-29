@@ -52,7 +52,7 @@ export default function Home() {
 
 </div>
 
-<section className="relative px-6 pt-10 pb-2 md:min-h-[52vh] md:px-16 md:pt-16 md:pb-4">
+<section className="relative px-6 pt-10 pb-8 md:min-h-[62vh] md:px-16 md:pt-16 md:pb-12">
   <div className="pointer-events-none absolute inset-0">
     <div className="cloud-curtain-left absolute -left-40 top-0 h-56 w-[70%] rounded-full bg-white/12 blur-[80px]" />
 <div className="cloud-curtain-right absolute -right-40 bottom-0 h-56 w-[70%] rounded-full bg-purple-200/12 blur-[90px]" />
