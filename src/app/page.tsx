@@ -25,7 +25,7 @@ export default function Home() {
 </div>
 
     <div className="pointer-events-none fixed inset-0 z-0">
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),linear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
+ <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#8247E555,transparent_35%),radial-gradient(circle_at_bottom_left,#D4AF3722,transparent_30%),linear-gradient(180deg,#06030D_0%,#1A0730_38%,#090512_70%,#05070D_100%)]" />
 
   <div className="absolute right-10 top-1/3 h-64 w-64 rounded-full bg-[#D4AF37]/10 blur-3xl" />
 
@@ -100,8 +100,8 @@ export default function Home() {
   </div>
 </section>
 
-      <section className="relative z-10 overflow-hidden px-6 pt-6 pb-10 md:px-16 md:pt-8 md:pb-16">
-  <div className="pointer-events-none absolute inset-x-0 -top-40 bottom-0 bg-[radial-gradient(circle_at_70%_10%,#8247E540,transparent_35%),radial-gradient(circle_at_20%_80%,#D4AF3718,transparent_38%)] opacity-70" />
+      <section className="relative z-10 px-6 pt-6 pb-10 md:px-16 md:pt-8 md:pb-16">
+  
 
  <div className="relative z-10 mx-auto max-w-6xl">
 
