@@ -399,48 +399,49 @@ export default function Home() {
           </section>
 
          <section className="mt-16 grid gap-6 md:grid-cols-2">
-            <div className="self-start rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
-  <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
-    Project Overview
-  </p>
+  <div className="self-start">
+    <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
+      <p className="mb-3 inline-block rounded-lg border border-[#D4AF37]/50 bg-[#D4AF37]/10 px-3 py-1 text-xs font-black uppercase tracking-widest text-[#D4AF37]">
+        Project Overview
+      </p>
 
-  <h3 className="mb-4 text-2xl font-black text-white">
-    About CristoCoin
-  </h3>
+      <h3 className="mb-4 text-2xl font-black text-white">
+        About CristoCoin
+      </h3>
 
-  <p className="text-sm leading-relaxed text-zinc-300 md:text-base">
-    CristoCoin is a community-driven experimental memecoin on Polygon, shaped as
-    a cultural, meme-powered and arcade-inspired Web3 project. The shrine is built
-    around entertainment, community identity, transparent access and playful
-    on-chain culture.
-  </p>
-  
+      <p className="text-sm leading-relaxed text-zinc-300 md:text-base">
+        CristoCoin is a community-driven experimental memecoin on Polygon, shaped as
+        a cultural, meme-powered and arcade-inspired Web3 project. The shrine is built
+        around entertainment, community identity, transparent access and playful
+        on-chain culture.
+      </p>
 
-  <div className="mt-6 rounded-2xl border border-[#D4AF37]/25 bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-300">
+      <div className="mt-6 rounded-2xl border border-[#D4AF37]/25 bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-300">
+        <div className="grid gap-3 text-sm md:grid-cols-3">
+          <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+            <p className="text-purple-300">Network</p>
+            <p className="mt-1 font-black text-white">Polygon</p>
+          </div>
 
-<div className="mt-5 mb-5 grid gap-3 text-sm md:grid-cols-3">
-  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
-    <p className="text-purple-300">Network</p>
-    <p className="mt-1 font-black text-white">Polygon</p>
+          <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+            <p className="text-purple-300">Access</p>
+            <p className="mt-1 font-black text-white">Read-only shrine</p>
+          </div>
+
+          <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
+            <p className="text-purple-300">Mode</p>
+            <p className="mt-1 font-black text-white">Community arcade</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p className="mt-4 rounded-2xl border border-[#D4AF37]/25 bg-black/35 px-4 py-3 text-xs leading-relaxed text-zinc-400">
+      <span className="font-black text-[#D4AF37]">Important:</span>{" "}
+      CristoCoin does not promise profit, value, utility or future development.
+      Nothing on this website is financial advice.
+    </p>
   </div>
-
-  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
-    <p className="text-purple-300">Access</p>
-    <p className="mt-1 font-black text-white">Read-only shrine</p>
-  </div>
-
-  <div className="rounded-xl border border-purple-500/25 bg-black/35 p-4">
-    <p className="text-purple-300">Mode</p>
-    <p className="mt-1 font-black text-white">Community arcade</p>
-  </div>
-</div>
-</div>
-    <p className="mt-6 max-w-3xl rounded-2xl border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-4 py-3 text-xs leading-relaxed text-zinc-300">
-  <span className="font-black text-[#D4AF37]">Important:</span>{" "}
-  CristoCoin does not promise profit, value, utility or future development.
-  Nothing on this website is financial advice.
-</p>
-</div>
             <div className="rounded-3xl border border-purple-500/40 bg-gradient-to-br from-black via-purple-950/20 to-black p-6 shadow-[0_0_30px_#8247E51A]">
   <p className="mb-3 inline-block rounded-lg border border-purple-400/50 bg-purple-950/40 px-3 py-1 text-xs font-black uppercase tracking-widest text-purple-200">
     Token Details
