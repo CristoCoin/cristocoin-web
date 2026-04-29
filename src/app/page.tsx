@@ -1,19 +1,14 @@
 import { HolderDashboard } from "@/components/HolderDashboard";
 
+import { tokenomics } from "@/lib/tokenomics";
+
 import { InfoRow } from "@/components/InfoRow";
 
 import { CopyContractButton } from "@/components/CopyContractButton";
 
 const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
 
-const tokenomics = [
-  { label: "Liquidity", value: "40%" },
-  { label: "Community", value: "25%" },
-  { label: "Marketing", value: "15%" },
-  { label: "Creator Reserve", value: "10%" },
-  { label: "Future Development", value: "5%" },
-  { label: "Burn Events", value: "5%" },
-];
+
 
 export default function Home() {
   return (
