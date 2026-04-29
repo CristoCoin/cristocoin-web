@@ -6,6 +6,8 @@ import { InfoRow } from "@/components/InfoRow";
 
 import { roadmapModules } from "@/lib/roadmapModules";
 
+import { shrineSteps } from "@/lib/shrineSteps";
+
 import { CopyContractButton } from "@/components/CopyContractButton";
 
 const CONTRACT_ADDRESS = "0x03b192ADBa8432190959b6580F9D596033a39ba9";
@@ -324,28 +326,7 @@ export default function Home() {
 </div>
 
             <div className="grid gap-4 md:grid-cols-5">
-              {[
-  {
-    title: "Open MetaMask",
-    text: "Launch the MetaMask mobile app.",
-  },
-  {
-    title: "Enter Browser",
-    text: "Use the built-in dApp browser.",
-  },
-  {
-    title: "Visit Shrine",
-    text: "Open the official CristoCoin website.",
-  },
-  {
-  title: "Connect Wallet",
-  text: "Connect through the read-only access panel.",
-},
-{
-  title: "Reveal Status",
-  text: "Holders reveal rank. Visitors enter explore mode.",
-},
-].map((step, index) => (
+             {shrineSteps.map((step, index) => (
                <div
   key={step.title}
   className="rounded-2xl border border-purple-500/40 bg-purple-950/30 p-5 shadow-[0_0_18px_#8247E511]"
