@@ -327,6 +327,7 @@ The shrine reads your public wallet signal only. No transaction is required.
       <a
         href="https://x.com/CristoCoinToken"
         target="_blank"
+        rel="noopener noreferrer"
 className="rounded-xl border border-[#D4AF37]/70 bg-[#D4AF37]/15 px-5 py-3 text-center text-xs font-black uppercase tracking-widest text-[#D4AF37] shadow-[0_0_18px_rgba(212,175,55,0.18)] transition hover:bg-[#D4AF37]/25 hover:text-yellow-200"        
       >
         Follow First Drop

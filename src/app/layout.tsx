@@ -3,8 +3,9 @@ import "./globals.css";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
-  title: "CristoCoin $CRISTO",
-  description: "The meme has risen on Polygon.",
+  title: "CristoCoin $CRISTO | Arcade Shrine on Polygon",
+  description:
+    "Enter the CristoCoin arcade shrine: a meme-powered Web3 experience on Polygon with wallet status, visitor mode and community roadmap.",
 };
 
 export default function RootLayout({

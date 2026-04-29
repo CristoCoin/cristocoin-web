@@ -140,6 +140,7 @@ export default function Home() {
   <a
   href="https://x.com/CristoCoinToken"
   target="_blank"
+  rel="noopener noreferrer"
   className="whitespace-nowrap rounded-xl border border-purple-400 px-4 py-2 text-sm font-bold text-purple-200 transition hover:bg-purple-950/40"
 >
   <span className="hidden sm:inline">Follow on X</span>
@@ -200,6 +201,7 @@ export default function Home() {
         <a
           href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
           target="_blank"
+          rel="noopener noreferrer"
           className="rounded-xl border border-purple-400 bg-black/40 px-4 py-3 text-center text-sm font-black text-purple-100 transition hover:bg-purple-950/40"
         >
           Verify on PolygonScan
@@ -549,6 +551,7 @@ token, wallet prompt or Web3 application.
       <a
         href={`https://polygonscan.com/token/${CONTRACT_ADDRESS}`}
         target="_blank"
+        rel="noopener noreferrer"
         className="rounded-full border border-[#D4AF37]/40 px-3 py-2 text-[#D4AF37] transition hover:bg-[#D4AF37]/10"
       >
         Verify
@@ -557,6 +560,7 @@ token, wallet prompt or Web3 application.
       <a
         href="https://x.com/CristoCoinToken"
         target="_blank"
+        rel="noopener noreferrer"
         className="rounded-full border border-purple-400/40 px-3 py-2 text-purple-100 transition hover:bg-purple-950/40"
       >
         X
