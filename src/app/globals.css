@@ -699,19 +699,22 @@ section {
     0 0 26px rgba(212, 175, 55, 0.12),
     inset 0 0 0 1px rgba(255, 255, 255, 0.025);
 }
+/* Interactive CristoCoin real 3D coin */
 
 .interactive-coin-zone {
   position: relative;
   z-index: 5;
+  isolation: isolate;
   display: flex;
-  min-height: 390px;
-  width: min(100%, 520px);
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 560px);
+  height: 430px;
+  min-height: 430px;
   cursor: grab;
   touch-action: none;
   user-select: none;
-  align-items: center;
-  justify-content: center;
-  perspective: 1200px;
+  overflow: visible;
 }
 
 .interactive-coin-zone:active {
@@ -721,11 +724,12 @@ section {
 .interactive-coin-zone::before {
   content: "";
   position: absolute;
+  z-index: 0;
   inset: 18px;
   border-radius: 999px;
   background:
-    radial-gradient(circle, rgba(212, 175, 55, 0.22), transparent 28%),
-    radial-gradient(circle, rgba(130, 71, 229, 0.38), transparent 68%);
+    radial-gradient(circle, rgba(212, 175, 55, 0.14), transparent 28%),
+    radial-gradient(circle, rgba(130, 71, 229, 0.28), transparent 68%);
   filter: blur(18px);
   pointer-events: none;
 }
@@ -733,216 +737,34 @@ section {
 .interactive-coin-zone::after {
   content: "";
   position: absolute;
+  z-index: 1;
   width: 380px;
   height: 380px;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.18);
+  border: 1px solid rgba(212, 175, 55, 0.14);
   box-shadow:
-    0 0 60px rgba(130, 71, 229, 0.30),
-    inset 0 0 48px rgba(212, 175, 55, 0.07);
+    0 0 48px rgba(130, 71, 229, 0.22),
+    inset 0 0 38px rgba(212, 175, 55, 0.04);
   pointer-events: none;
 }
 
-.interactive-coin {
+.interactive-coin-zone canvas {
   position: relative;
   z-index: 2;
-  width: 315px;
-  height: 315px;
-  transform-style: preserve-3d;
-  filter:
-    drop-shadow(0 0 30px rgba(212, 175, 55, 0.32))
-    drop-shadow(0 0 50px rgba(130, 71, 229, 0.36));
-  will-change: transform;
-}
-
-.interactive-coin.is-dragging {
-  filter:
-    drop-shadow(0 0 36px rgba(212, 175, 55, 0.44))
-    drop-shadow(0 0 60px rgba(168, 85, 247, 0.48));
-}
-
-.interactive-coin-face,
-.interactive-coin-slice {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 999px;
-  object-fit: cover;
-  backface-visibility: hidden;
-}
-
-.interactive-coin-front {
-  transform: translateZ(36px);
-}
-
-.interactive-coin-back {
-  transform: rotateY(180deg) translateZ(36px);
-}
-.interactive-coin-thickness {
-  position: absolute;
-  inset: 0;
-  transform-style: preserve-3d;
-}
-
-.interactive-coin-slice {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(62, 34, 10, 1) 0%,
-      rgba(236, 205, 102, 0.96) 18%,
-      rgba(140, 84, 20, 1) 45%,
-      rgba(255, 229, 135, 0.96) 68%,
-      rgba(42, 22, 8, 1) 100%
-    );
-  border: 1px solid rgba(255, 220, 120, 0.18);
-  box-shadow:
-    inset 0 0 8px rgba(255, 225, 130, 0.12),
-    inset 0 0 18px rgba(50, 25, 8, 0.28);
-}
-.interactive-coin-hint {
-  position: absolute;
-  bottom: 18px;
-  z-index: 4;
-  border: 1px solid rgba(212, 175, 55, 0.28);
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.42);
-  padding: 6px 12px;
-  color: rgba(255, 235, 170, 0.9);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.interactive-coin-zone:hover .interactive-coin-hint {
-  opacity: 1;
-  transform: translateY(0);
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 @media (max-width: 768px) {
   .interactive-coin-zone {
-    min-height: 320px;
+    width: 100%;
+    height: 340px;
+    min-height: 340px;
   }
-
-  .interactive-coin {
-    width: 240px;
-    height: 240px;
-  }
-
- .interactive-coin-front {
-  transform: translateZ(22px);
-}
-
-.interactive-coin-back {
-  transform: rotateY(180deg) translateZ(22px);
-}
 
   .interactive-coin-zone::after {
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
   }
-}
-
-.interactive-coin-rim {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 64px;
-  height: 100%;
-  transform: translate(-50%, -50%) rotateY(90deg);
-  transform-style: preserve-3d;
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(28, 14, 4, 1) 0%,
-      rgba(104, 61, 13, 1) 12%,
-      rgba(255, 224, 112, 1) 28%,
-      rgba(137, 82, 16, 1) 48%,
-      rgba(255, 235, 151, 1) 68%,
-      rgba(74, 38, 8, 1) 86%,
-      rgba(18, 10, 3, 1) 100%
-    );
-  box-shadow:
-    inset 10px 0 18px rgba(255, 235, 150, 0.2),
-    inset -12px 0 22px rgba(0, 0, 0, 0.55),
-    0 0 22px rgba(212, 175, 55, 0.22);
-  opacity: 0.95;
-}
-/* Strong visible coin thickness */
-
-.interactive-coin {
-  position: relative;
-  overflow: visible;
-}
-
-/* Canto derecho visible */
-.interactive-coin::before {
-  content: "";
-  position: absolute;
-  top: 4%;
-  right: -32px;
-  z-index: 1;
-  width: 72px;
-  height: 92%;
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(30, 16, 4, 1) 0%,
-      rgba(96, 54, 10, 1) 12%,
-      rgba(255, 226, 118, 1) 32%,
-      rgba(138, 82, 18, 1) 52%,
-      rgba(255, 238, 160, 1) 72%,
-      rgba(62, 32, 7, 1) 100%
-    );
-  box-shadow:
-    inset 10px 0 18px rgba(255, 238, 160, 0.22),
-    inset -16px 0 24px rgba(0, 0, 0, 0.62),
-    0 0 18px rgba(212, 175, 55, 0.22);
-  transform: rotateY(58deg);
-  transform-origin: left center;
-}
-
-/* Sombra/canto izquierdo para más volumen */
-.interactive-coin::after {
-  content: "";
-  position: absolute;
-  top: 6%;
-  left: -13px;
-  z-index: 0;
-  width: 34px;
-  height: 88%;
-  border-radius: 999px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(10, 6, 2, 1),
-      rgba(88, 48, 9, 0.95),
-      rgba(230, 185, 70, 0.55)
-    );
-  filter: blur(0.2px);
-  opacity: 0.85;
-  transform: rotateY(-54deg);
-  transform-origin: right center;
-}
-
-.interactive-coin-face {
-  z-index: 3;
-}
-
-.interactive-coin-thickness {
-  z-index: 2;
-}
-
-.interactive-coin-front {
-  transform: translateZ(42px);
-}
-
-.interactive-coin-back {
-  transform: rotateY(180deg) translateZ(42px);
 }
