@@ -10,6 +10,7 @@ import {
   MeshStandardMaterial,
   RepeatWrapping,
   SRGBColorSpace,
+  Texture,
   TextureLoader,
 } from "three";
 
@@ -35,52 +36,54 @@ function CoinModel({
     const ctx = canvas.getContext("2d");
     if (!ctx) return null;
 
-    const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0.0, "#2f1a05");
-    gradient.addColorStop(0.08, "#6f430c");
-    gradient.addColorStop(0.16, "#c28a20");
-    gradient.addColorStop(0.26, "#f5d978");
-    gradient.addColorStop(0.36, "#a76a17");
-    gradient.addColorStop(0.5, "#ffeb99");
-    gradient.addColorStop(0.64, "#b97818");
-    gradient.addColorStop(0.78, "#f1d36c");
-    gradient.addColorStop(0.9, "#7b4a0e");
-    gradient.addColorStop(1.0, "#2a1704");
+    const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    gradient.addColorStop(0, "#3b2206");
+    gradient.addColorStop(0.12, "#70430c");
+    gradient.addColorStop(0.26, "#b47a1d");
+    gradient.addColorStop(0.38, "#f0c66a");
+    gradient.addColorStop(0.5, "#ffe9a3");
+    gradient.addColorStop(0.62, "#d3952f");
+    gradient.addColorStop(0.78, "#875312");
+    gradient.addColorStop(1, "#2b1603");
 
     ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    // Estrías finas de moneda
     for (let x = 0; x < canvas.width; x += 8) {
       ctx.fillStyle =
         x % 16 === 0
-          ? "rgba(255, 245, 190, 0.34)"
-          : "rgba(70, 40, 10, 0.22)";
-      ctx.fillRect(x, 0, 3, canvas.height);
+          ? "rgba(255, 236, 170, 0.28)"
+          : "rgba(60, 30, 0, 0.12)";
+      ctx.fillRect(x, 0, 2, canvas.height);
     }
 
-    for (let x = 0; x < canvas.width; x += 96) {
-      const shine = ctx.createLinearGradient(x, 0, x + 26, 0);
+    // Brillos suaves para dar sensación metálica
+    for (let x = 0; x < canvas.width; x += 120) {
+      const shine = ctx.createLinearGradient(x, 0, x + 34, 0);
       shine.addColorStop(0, "rgba(255,255,255,0)");
-      shine.addColorStop(0.5, "rgba(255,240,180,0.22)");
+      shine.addColorStop(0.5, "rgba(255,236,170,0.2)");
       shine.addColorStop(1, "rgba(255,255,255,0)");
+
       ctx.fillStyle = shine;
-      ctx.fillRect(x, 0, 26, canvas.height);
+      ctx.fillRect(x, 0, 34, canvas.height);
     }
 
-    const verticalShade = ctx.createLinearGradient(0, 0, 0, canvas.height);
-    verticalShade.addColorStop(0, "rgba(0,0,0,0.24)");
-    verticalShade.addColorStop(0.18, "rgba(0,0,0,0.05)");
-    verticalShade.addColorStop(0.5, "rgba(255,255,255,0.02)");
-    verticalShade.addColorStop(0.82, "rgba(0,0,0,0.05)");
-    verticalShade.addColorStop(1, "rgba(0,0,0,0.24)");
+    // Sombra superior e inferior para volumen
+    const shade = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    shade.addColorStop(0, "rgba(0,0,0,0.3)");
+    shade.addColorStop(0.2, "rgba(0,0,0,0.08)");
+    shade.addColorStop(0.5, "rgba(255,255,255,0.02)");
+    shade.addColorStop(0.8, "rgba(0,0,0,0.08)");
+    shade.addColorStop(1, "rgba(0,0,0,0.32)");
 
-    ctx.fillStyle = verticalShade;
+    ctx.fillStyle = shade;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     const texture = new CanvasTexture(canvas);
     texture.wrapS = RepeatWrapping;
     texture.wrapT = RepeatWrapping;
-    texture.repeat.set(72, 1);
+    texture.repeat.set(86, 1);
     texture.colorSpace = SRGBColorSpace;
     texture.needsUpdate = true;
 
@@ -88,27 +91,22 @@ function CoinModel({
   }, []);
 
   useEffect(() => {
-    frontTexture.colorSpace = SRGBColorSpace;
-    frontTexture.center.set(0.5, 0.5);
-    frontTexture.rotation = 0;
-    frontTexture.repeat.set(1, 1);
-    frontTexture.offset.set(0, 0);
-    frontTexture.needsUpdate = true;
-
-    backTexture.colorSpace = SRGBColorSpace;
-    backTexture.center.set(0.5, 0.5);
-    backTexture.rotation = 0;
-    backTexture.repeat.set(1, 1);
-    backTexture.offset.set(0, 0);
-    backTexture.needsUpdate = true;
+    [frontTexture, backTexture].forEach((texture: Texture) => {
+      texture.colorSpace = SRGBColorSpace;
+      texture.center.set(0.5, 0.5);
+      texture.rotation = 0;
+      texture.repeat.set(1, 1);
+      texture.offset.set(0, 0);
+      texture.needsUpdate = true;
+    });
   }, [frontTexture, backTexture]);
 
   const frontMaterial = useMemo(
     () =>
       new MeshStandardMaterial({
         map: frontTexture,
-        metalness: 0.58,
-        roughness: 0.3,
+        metalness: 0.28,
+        roughness: 0.5,
         side: DoubleSide,
         transparent: false,
         opacity: 1,
@@ -121,8 +119,8 @@ function CoinModel({
     () =>
       new MeshStandardMaterial({
         map: backTexture,
-        metalness: 0.58,
-        roughness: 0.3,
+        metalness: 0.28,
+        roughness: 0.5,
         side: DoubleSide,
         transparent: false,
         opacity: 1,
@@ -135,13 +133,14 @@ function CoinModel({
     () =>
       new MeshPhysicalMaterial({
         map: edgeTexture ?? undefined,
-        color: "#d8a93a",
+        color: "#c18a2d",
         metalness: 1,
-        roughness: 0.22,
-        clearcoat: 1,
-        clearcoatRoughness: 0.16,
-        emissive: "#5f3500",
-        emissiveIntensity: 0.1,
+        roughness: 0.34,
+        clearcoat: 0.75,
+        clearcoatRoughness: 0.22,
+        reflectivity: 0.75,
+        emissive: "#2e1800",
+        emissiveIntensity: 0.035,
       }),
     [edgeTexture]
   );
@@ -149,13 +148,14 @@ function CoinModel({
   const rimMaterial = useMemo(
     () =>
       new MeshPhysicalMaterial({
-        color: "#ffe08a",
+        color: "#d6a842",
         metalness: 1,
-        roughness: 0.2,
-        clearcoat: 1,
-        clearcoatRoughness: 0.12,
-        emissive: "#6d4300",
-        emissiveIntensity: 0.06,
+        roughness: 0.3,
+        clearcoat: 0.85,
+        clearcoatRoughness: 0.18,
+        reflectivity: 0.65,
+        emissive: "#3a2200",
+        emissiveIntensity: 0.025,
       }),
     []
   );
@@ -181,35 +181,31 @@ function CoinModel({
       </mesh>
 
       {/* CARA DELANTERA */}
-      <mesh
-        position={[0, 0, 0.1215]}
-        rotation={[0, 0, 0]}
-        material={frontMaterial}
-      >
-        <circleGeometry args={[1.168, 160]} />
+      <mesh position={[0, 0, 0.1215]} rotation={[0, 0, 0]} material={frontMaterial}>
+        <circleGeometry args={[1.145, 192]} />
       </mesh>
 
       {/* CARA TRASERA */}
-     <mesh
-  position={[0, 0, -0.1215]}
-  rotation={[0, Math.PI, 0]}
-  material={backMaterial}
->
-  <circleGeometry args={[1.168, 160]} />
-</mesh>
+      <mesh
+        position={[0, 0, -0.1215]}
+        rotation={[0, Math.PI, 0]}
+        material={backMaterial}
+      >
+        <circleGeometry args={[1.145, 192]} />
+      </mesh>
 
       {/* ARO PREMIUM FRONTAL */}
-      <mesh position={[0, 0, 0.1228]} material={rimMaterial}>
-        <ringGeometry args={[1.11, 1.185, 160]} />
+      <mesh position={[0, 0, 0.1225]} material={rimMaterial}>
+        <ringGeometry args={[1.145, 1.185, 192]} />
       </mesh>
 
       {/* ARO PREMIUM TRASERO */}
       <mesh
-        position={[0, 0, -0.1228]}
+        position={[0, 0, -0.1225]}
         rotation={[0, Math.PI, 0]}
         material={rimMaterial}
       >
-        <ringGeometry args={[1.11, 1.185, 160]} />
+        <ringGeometry args={[1.145, 1.185, 192]} />
       </mesh>
     </group>
   );
@@ -287,12 +283,31 @@ export function InteractiveCoin() {
         gl={{ alpha: true, antialias: true }}
         style={{ width: "100%", height: "100%", background: "transparent" }}
       >
-        <ambientLight intensity={1.2} />
-        <directionalLight position={[4, 3, 6]} intensity={2.6} color="#fff4d8" />
-        <directionalLight position={[-4, 2, 4]} intensity={1.15} color="#8b5cf6" />
-        <pointLight position={[2.2, 0.6, 4]} intensity={1.9} color="#ffd36b" />
-        <pointLight position={[-2, 0.5, 3.2]} intensity={0.8} color="#c084fc" />
-        <pointLight position={[0, 2.5, 3]} intensity={0.7} color="#ffffff" />
+        <ambientLight intensity={1.05} />
+
+        <directionalLight
+          position={[4, 3, 5]}
+          intensity={1.65}
+          color="#ffe5b0"
+        />
+
+        <directionalLight
+          position={[-3, 2, 4]}
+          intensity={0.8}
+          color="#8b5cf6"
+        />
+
+        <pointLight
+          position={[2.4, 0.6, 4]}
+          intensity={1.25}
+          color="#ffd36b"
+        />
+
+        <pointLight
+          position={[-2, -0.6, 3]}
+          intensity={0.55}
+          color="#ffffff"
+        />
 
         <CoinModel
           angleRef={angleRef}

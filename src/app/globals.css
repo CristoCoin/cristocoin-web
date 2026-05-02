@@ -725,29 +725,29 @@ section {
   content: "";
   position: absolute;
   z-index: 0;
-  inset: 18px;
+  inset: 22px;
   border-radius: 999px;
   background:
-    radial-gradient(circle, rgba(212, 175, 55, 0.14), transparent 28%),
-    radial-gradient(circle, rgba(130, 71, 229, 0.28), transparent 68%);
-  filter: blur(18px);
+    radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent 26%),
+    radial-gradient(circle, rgba(130, 71, 229, 0.22), transparent 66%);
+  filter: blur(16px);
+  opacity: 0.9;
   pointer-events: none;
 }
-
 .interactive-coin-zone::after {
   content: "";
   position: absolute;
   z-index: 1;
-  width: 380px;
-  height: 380px;
+  width: 360px;
+  height: 360px;
   border-radius: 999px;
-  border: 1px solid rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.09);
   box-shadow:
-    0 0 48px rgba(130, 71, 229, 0.22),
-    inset 0 0 38px rgba(212, 175, 55, 0.04);
+    0 0 28px rgba(130, 71, 229, 0.16),
+    inset 0 0 22px rgba(212, 175, 55, 0.025);
+  opacity: 0.92;
   pointer-events: none;
 }
-
 .interactive-coin-zone canvas {
   position: relative;
   z-index: 2;
